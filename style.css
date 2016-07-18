@@ -278,3 +278,11 @@ html, body {
 text-align: center;
 }
 p {text-align: left;}
+
+#monosp {
+    font-family: monospace;
+    display:inline;
+    text-align:left;
+    font-size:12px;
+    text-decoration:none;
+}
