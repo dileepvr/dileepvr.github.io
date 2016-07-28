@@ -49,7 +49,7 @@
         <div id="content_main">
         	<h2>Git repos</h2>
         	<p>&nbsp;</p>
-		<p> <a href="https://git-scm.com/">Git</a> is a free and open source, version-control software. <a href="https://github.com">Github</a> is a private company that has thrown it's servers open to the public to store their git repositories online for free (subject to size constraints). This frees people from the hassle of setting up their own online repos, and aids in small-scale collaborative coding. My own github page can be found at <a href="https://github.com/dileepvr">https://github.com/dileepvr</a>. While most of them have licenses and README files, some of them have interesting stories behind them.</p>
+		<p> <a href="https://git-scm.com/">Git</a> is a free and open source, version-control software. <a href="https://github.com">Github</a> is a private company that has thrown its servers open to the public to store their git repositories online for free (subject to size constraints). This frees people from the hassle of setting up their own online repos, and aids in small-scale collaborative coding. My own github page can be found at <a href="https://github.com/dileepvr">https://github.com/dileepvr</a>. While most of them have licenses and README files, some of them have interesting stories behind them.</p>
 		<p>&nbsp;</p>
 		<a href="https://github.com/dileepvr/spice-pinball"><h3>spice-pinball</h3></a>
 		<p>&nbsp;</p>
@@ -57,7 +57,7 @@
 		<p>&nbsp;</p>
 		<img src="images/spice_camp.jpg" width=800>
 		  <p>&nbsp;</p>
-		  <p>I got involved with SPICE when a friend with a mutual interest in beam-robotics convinced me to volunteer for it. I was tasked with leading some Engineering camp sessions, and designing/debugging/assembling electronics for it. One year, we decided to add microcontroller programming to the curriculum, and I was asked to design and teach a few pilot sessions on it. Based on the feedback, we decided to make Arduino programming a core component of the camp. As it stands to day, the engineering camp has the participant teams learning to program an Atmega32u4 using the Arduino IDE, learning to use various sensors (piezo elements, push-buttons, IR detectors) and actuators with it, and ultimately integrating the whole into a fully functional pinball table. And I've been writing and maintaining some libraries in this <a href="https://github.com/dileepvr/spice-pinball">git repository</a> to make the coding easier to implement and parse.</p>
+		  <p>I got involved with SPICE when a friend with a shared interest in beam-robotics convinced me to volunteer for it. I was tasked with leading some Engineering camp sessions, and designing/debugging/assembling electronics for it. One year, we decided to add microcontroller programming to the curriculum, and I was asked to design and teach a few pilot sessions on it. Based on the feedback, we decided to make Arduino programming a core component of the camp. As it stands to day, the engineering camp has the participant teams learning to program an Atmega32u4 using the Arduino IDE, learning to use various sensors (piezo elements, push-buttons, IR detectors) and actuators with it, and ultimately integrating the whole into a fully functional pinball table. And I've been writing and maintaining some libraries in this <a href="https://github.com/dileepvr/spice-pinball">git repository</a> to make the coding easier to implement and parse.</p>
 		  <p>&nbsp;</p>
 		  <p>The lessons/sessions have been neatly formatted into a <a href="http://agoering.github.io/spice-pinball/">hypertext tutorial-style website</a> by <a href="https://www.linkedin.com/in/andreagoering">Andrea Goering</a>. <a href="http://pages.uoregon.edu/wwe/">Wes Erickson</a> has also been a fellow contributor. Some of the functionality (like the motor H-bridge) requires custom PCBs to function. The library itself is very transparent and convenient. I find myself often using it in other projects when I don't want to bother with internal timer and interrupt registers for the avr chips that power the whole thing. This library has been released under a modified version of the MIT license.</p>
 		<p>&nbsp;</p>
@@ -85,10 +85,21 @@
 		<p>&nbsp;</p>		  		  
 		<a href="https://github.com/dileepvr/novenaX_kicad"><h3>novenaX_kicad</h3></a>
 		<p>&nbsp;</p>
-	          <p>COMING SOON.</p>
+	          <p>If you've followed my blog posts on <a href="http://rightshift.info">Rightshift</a>, you'll know of Project Novena-X. I am building a laptop around the <a href="https://www.kosagi.com/w/index.php?title=Novena_Main_Page">Novena Motherboard</a>. I have gone a bit crazy with the project, and am trying to interface with a rediculously proprietary, backlit, Dell keyboard (0wx4jf), and also deck the front display panel out with a character LCD module, an E-ink display, as well as internal i2c devices and an nRF24l01+ module.</p>
 		  <p>&nbsp;</p>
-		    
-		<p>&nbsp;</p>		
+		  <img src="images/novena_concept.jpg" width=800>
+		    <p>&nbsp;</p>
+		    <p>The circuitry meant to interface between all of these diverse elements is relying on USB hubs and a bunch of avr microcontrollers (the schematics can be found in the repo). I have laid them out on 2-layer PCBs using the open-source <a href="http://kicad-pcb.org/">kicad</a> suite, which I happen to use for all my PCB (printed circuit board) projects.</p>
+		  <p>&nbsp;</p>
+		  <img src="images/novena_newboard.jpg" width=800>
+		    <p>&nbsp;</p>
+		    The layout has undergone some iterations. I am currently testing the various subsystems to see if they work independently.
+		  <p>&nbsp;</p>
+		  <img src="images/novena_full_PCB.jpg" width=800>
+		    <p>&nbsp;</p>
+		    I am using <a href="https://oshpark.com/">OSHPark</a> as a PCB printing service. They print 2-layer boards at $5 per square inch (with 3 copies of the board included in that price). They also print 4-layer boards at a different prince. Just upload the zip file inside the gerber folder of the project <a href="https://github.com/dileepvr/novenaX_kicad">repository</a> unto their website and you are good to go.</p>
+		  <p>&nbsp;</p>
+		  <img src="images/novena_PCBs.jpg" width=800>
           <p></p>
 <p>&nbsp;</p>
         </div>
