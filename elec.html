@@ -47,8 +47,32 @@
         
         <div id="content_top"></div>
         <div id="content_main">
-        	<h2>Electronics (coming soon)</h2>
+        	<h2>Electronics</h2>
         	<p>&nbsp;</p>
+		<p>Projects involving currents and wires (and other frustrations).</p>
+        	<p>&nbsp;</p>		
+        	<p>&nbsp;</p>
+		<a href="https://github.com/dileepvr/spin_half"><h3>Spin-half</h3></a>
+		<p>&nbsp;</p>
+		<img src="images/spin_half_schematic.jpg" width=800>
+       		<p>&nbsp;</p>
+		<p>The <a href="http://scilit.uoregon.edu/">Science Literacy Program</a> at the University of Oregon often funds graduate students to help develop and teach new courses. In 2013, my advisor <a href="http://oco.uoregon.edu/faculty/michael-raymer">Prof. Mike Raymer</a> happened to be creating one called "Quantum Mechanics for Everyone", and asked <a href="https://www.linkedin.com/in/christopher-jackson-82984ba8">Chris Jackson</a> and me to help design and TA the course. Naturally, I accepted.</p>
+		<p>At the time, I was just getting into microcontrollers, and was looking for a project that could use attiny2313 chips. I had to teach Quantum Key Distribution (QKD) to the class, and hence, had to develop an in-class, hands-on activity that would help teach non-majors. This, the spin-half board was born.</p>
+		<p>&nbsp;</p>
+		<img src="images/spin_half_board_front.jpg" width=200>
+       		  <p>&nbsp;</p>
+		  <p>The board has an RGB LED, an SPST switch to change "bases," and three push (tactile) buttons. Onboard surface mount LEDs (red and green) indicate if the current state is the "red/blue" basis, or the "green/white" basis. It fits in the palm of one's hand, and is powered with a coin cell (on the back of the board). <a href="https://github.com/dileepvr/spin_half/blob/master/spin_half_doc.pdf">This document</a> explains how it is meant to be used. It essentially allows a student to function as a spin-half particle, able to respond to external measurements by other students. They then learn to follow the algorithm illustrated in this in-class <a href="https://github.com/dileepvr/spin_half/blob/master/qkd_handout.pdf">handout document</a> and learn to respect the Born rule. The activity involved learning to transmit bits from one student to another, and to study the effects of a third student functioning as an eavesdropper. The board was programmed using the six ICSP header pins using <a href="https://github.com/dileepvr/spin_half/tree/master/avr_code">code</a> written in avr-gcc. I used a USBtinyISP from <a href="https://www.sparkfun.com/">Sparkfun</a> to upload the code using the avrdude interface utility.</p>
+     	<p>&nbsp;</p>
+        	<p>&nbsp;</p>
+		<a href="images/100kHzAM.pdf"><h3>Low frequency AM receiver</h3></a>
+		<p>&nbsp;</p>
+		<img src="images/100kHzAM.png" width=800>
+       		<p>&nbsp;</p>
+		<p>I needed a simple demonstration for AM (amplitude Modulation) based transmission and reception. The primary aim was to demonstrate orthogonality of disjoint frequency bands. And I wanted to do this below 100 kHz, so that a regular oscilloscope could keep up and show some waveforms. DO NOT DO THIS. I was swamped with thermal noise, and just barely got it to work!</p>
+		<p>&nbsp;</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/7Buuqx1lRzg?start=240&end=650&version=3" frameborder="0" allowfullscreen></iframe>
+		<p>&nbsp;</p>
+		<p>The transmitter was using analog multiplier chips. I considered making a Gilbert cell by myself, but couldn't find matched transistor pairs. Other lessons learnt: Arrange gain amplifiers at the receiver in descending order such that the largest gain is nearer the antenna. This way, noise at every stage doesn't get amplified at successive stages too much (work this out mathematically. HW assignment!) Also, note that there are low-noise signal (operational) amplifiers that do the voltage translation, and there are power amplifiers, that can actually drive large amounts of current necessary to vibrate a speaker. Use one of those at the end.</p>		  
           <p></p>
 <p>&nbsp;</p>
         </div>

@@ -65,8 +65,30 @@
 		  <img src="images/transitofmercury_03.jpg" width=800>
 		  <p>(Photo credit: <a href="https://about.me/DeyWalt">Dean Walton</a>)</p>		    
        		  <p>&nbsp;</p>		  		    
-		  <p>Unlike Venus, mercurial transits are relatively more common. They occur about 13 to 33 years apart. Despite the orbital period of Mercury being about 88 Earth-days, the planar tilt of its orbit is opposite that of the Earth. It's day-night cycle is tidally locked to it's orbital period to a ratio of 3/2. The planet's silhouette was about 1/160th the diameter of the Sun. A bit of an anti-climax, really, unless you know what you are looking at.</p>		    
-	  
+		  <p>Unlike Venus, mercurial transits are relatively more common. They occur about 13 to 33 years apart. Despite the orbital period of Mercury being about 88 Earth-days, the planar tilt of its orbit is opposite that of the Earth. Its day-night cycle is tidally locked to its orbital period to a ratio of 3/2. The planet's silhouette was about 1/160th the diameter of the Sun. A bit of an anti-climax, really, unless you know what you are looking at.</p>		    
+        	<p>&nbsp;</p>
+        	<p>&nbsp;</p>
+		<h3>CD-drive shenanigans</h3>
+		<p></p>           	<p>&nbsp;</p>
+		<img src="images/cddrive01.jpg" width=800>
+       		  <p>&nbsp;</p>
+		  <p>I do some volunteer work for <a href="http://spicescience.uoregon.edu/">SPICE Camp</a> every summer, as is mentioned <a href="repo.html"> elsewhere</a>. And one of the most loved exercises is the one where we get the kids to take old, surplused computer towers apart for parts. Most of them have never seen the guts before, and they are natural destroyers of things. Back in 2013, during a routine brainstorming session on possible new activities for the camp, we (<a href="http://pages.uoregon.edu/wwe/">Wes</a> and I) attempted to create a project where parts from CD-drives and hard disks (the voice coil or readhead) could be put together to make 2D plotters and scanners. We ended up scrapping the idea on account of the design being to unreliable and time consuming. But we did successfully create some prototypes.</p>
+		  <p>&nbsp;</p>
+		  <iframe width="640" height="480" src="https://www.youtube.com/embed/a_5HK0wdDYE" frameborder="0" allowfullscreen></iframe>
+		  <p>&nbsp;</p>
+		  <iframe width="640" height="480" src="https://www.youtube.com/embed/0iV6Bp7krnI" frameborder="0" allowfullscreen></iframe>
+		  <p>&nbsp;</p>
+		  <p>Linear stages are a pain to deal with. Having dabbled in trying to make a reprap, I am intimately familiar with that pain. The drive trays are controlled by DC motors. Some read heads are controlled by DC motors, and others by stepper motors. To work with DC motors and get an estimate of distance travelled, we used photogates (IR interrupters) and black patterns printed onto transparencies.</p>
+		<p>&nbsp;</p>
+		<img src="images/cddrive02.jpg" width=800>
+       		<p>&nbsp;</p>
+		<p>We had end-stops for edge-limit detection, and a startup, full travel routine to estimate maximum range for both directions. All the "images" were ascii files with a dot for blank space, an "x" for marked pixel, and an "n" for new line. The scanner simply used a photodiode to measure reflection from a laser pointer. The plotter however, used a hard-drive voice coil to lift and drop the pen. This was a huge mistake, as it was heavy, and tended to jerk the whole light device out of alignment. The drop and lift angles weren't vertical either, and voice coils are a huge power draw. All of these were controlled by custom-etched motor driver boards based on the H-bridge LM293D chip.</p>
+		<p>&nbsp;</p>
+		<img src="images/cddrive03.jpg" width=800>
+       		<p>&nbsp;</p>
+		<p>The whole assembly is held together by electrical tape and epoxy. Scanners would have communicated ASCII over serial to plotters. We would have had half the teams build plotters and the other half, scanners. We had even worked out how to power the whole thing using ATX power supplies (also pulled out of the computer towers). But the project became too complicated for the scope of the camp. They could be reworked into standalone camps though. Hit me up if you need the code.</p>
+		<p>&nbsp;</p>
+		<iframe width="640" height="480" src="https://www.youtube.com/embed/TxG9MHaHJ0M" frameborder="0" allowfullscreen></iframe>
         	<p>&nbsp;</p>
         	<p>&nbsp;</p>
 		<h3>Transit of Venus</h3>
