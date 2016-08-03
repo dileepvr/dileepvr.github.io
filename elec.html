@@ -52,7 +52,7 @@
 		<p>Projects involving currents and wires (and other frustrations).</p>
         	<p>&nbsp;</p>		
         	<p>&nbsp;</p>
-		<a href="https://github.com/dileepvr/spin_half"><h3>Spin-half</h3></a>
+		<a name="spin_half"><a href="https://github.com/dileepvr/spin_half"><h3>Spin-half</h3></a></a>
 		<p>&nbsp;</p>
 		<img src="images/spin_half_schematic.jpg" width=800>
        		<p>&nbsp;</p>
@@ -64,7 +64,7 @@
 		  <p>The board has an RGB LED, an SPST switch to change "bases," and three push (tactile) buttons. Onboard surface mount LEDs (red and green) indicate if the current state is the "red/blue" basis, or the "green/white" basis. It fits in the palm of one's hand, and is powered with a coin cell (on the back of the board). <a href="https://github.com/dileepvr/spin_half/blob/master/spin_half_doc.pdf">This document</a> explains how it is meant to be used. It essentially allows a student to function as a spin-half particle, able to respond to external measurements by other students. They then learn to follow the algorithm illustrated in this in-class <a href="https://github.com/dileepvr/spin_half/blob/master/qkd_handout.pdf">handout document</a> and learn to respect the Born rule. The activity involved learning to transmit bits from one student to another, and to study the effects of a third student functioning as an eavesdropper. The board was programmed using the six ICSP header pins using <a href="https://github.com/dileepvr/spin_half/tree/master/avr_code">code</a> written in avr-gcc. I used a USBtinyISP from <a href="https://www.sparkfun.com/">Sparkfun</a> to upload the code using the avrdude interface utility.</p>
      	<p>&nbsp;</p>
         	<p>&nbsp;</p>
-		<a href="images/100kHzAM.pdf"><h3>Low frequency AM receiver</h3></a>
+		<a name="AM"><a href="images/100kHzAM.pdf"><h3>Low frequency AM receiver</h3></a></a>
 		<p>&nbsp;</p>
 		<img src="images/100kHzAM.png" width=800>
        		<p>&nbsp;</p>
@@ -72,7 +72,18 @@
 		<p>&nbsp;</p>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/7Buuqx1lRzg?start=240&end=650&version=3" frameborder="0" allowfullscreen></iframe>
 		<p>&nbsp;</p>
-		<p>The transmitter was using analog multiplier chips. I considered making a Gilbert cell by myself, but couldn't find matched transistor pairs. Other lessons learnt: Arrange gain amplifiers at the receiver in descending order such that the largest gain is nearer the antenna. This way, noise at every stage doesn't get amplified at successive stages too much (work this out mathematically. HW assignment!) Also, note that there are low-noise signal (operational) amplifiers that do the voltage translation, and there are power amplifiers, that can actually drive large amounts of current necessary to vibrate a speaker. Use one of those at the end.</p>		  
+		<p>The transmitter was using analog multiplier chips. I considered making a Gilbert cell by myself, but couldn't find matched transistor pairs. Other lessons learnt: Arrange gain amplifiers at the receiver in descending order such that the largest gain is nearer the antenna. This way, noise at every stage doesn't get amplified at successive stages too much (work this out mathematically. HW assignment!) Also, note that there are low-noise signal (operational) amplifiers that do the voltage translation, and there are power amplifiers, that can actually drive large amounts of current necessary to vibrate a speaker. Use one of those at the end.</p>
+     	<p>&nbsp;</p>
+        	<p>&nbsp;</p>
+		<a name="IR"><h3>Modulating IR diodes for SNR</h3></a>
+		<p>&nbsp;</p>
+		<img src="images/irsignal.gif" width=600> <br>(Source: <a href="http://www.sbprojects.com/knowledge/ir/index.php">SBprojects.com</a>)
+       		<p>&nbsp;</p>
+		    <p>I've attempted to use infrared (IR) emitter-detector pairs in many a project. But unless they are being used as photogates (closely spaced and directly facing each other like IR interrupters), they have always been susceptible to noise. Things got particularly crazy on the <a href="repo.html#spice-pinball">SPICE camp Pinball</a> tables, which would rack up points in the presence of incandescent bulbs in the ceiling. The solution is obvious: upshift the information to a higher frequency where there is lesser environmental noise (which is mostly DC). Then use lockin detection, or bandpass filters followed by a demodulation circuit. Sounds complicated, until you realize that <a href="https://en.wikipedia.org/wiki/Consumer_IR">commercial remote control technology</a> has been doing this for decades.</p>
+		<p>&nbsp;</p>
+		<iframe width="640" height="480" src="https://www.youtube.com/embed/_I6iaBplpXU" frameborder="0" allowfullscreen></iframe>		    
+		    <p>&nbsp;</p>
+		<p>The IR receivers come at various IR wavelengths and carrier frequencies. They are astoundingly sensitive, and can pick my signal out from large distances even in sunlight, as long as there is line of sight. People normally advocate using a microcontroller to do both modulation (at the transmission end), and demodulation (at the receiver end), but I'd recommend offloading mundane tasks to dedicated, dump circuits and keeping the microcontroller scheduler free for important tasks.</p>
           <p></p>
 <p>&nbsp;</p>
         </div>
