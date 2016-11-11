@@ -4,6 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>Dileep's personal page</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </head>
 
 <body>
@@ -63,7 +69,20 @@
           <li><a href="r_NWM.html#lin">Linear, and nonlinear response</a></li>
           <li><a href="r_NWM.html#pha">Phase matching</a></li>
 	  <p>&nbsp;</p>	  
-	  <a name="elec"><h3>Consider the electron (Coming Soon)</h3></a>
+	  <a name="elec"><h3>Consider the electron</h3></a>
+	  <p>&nbsp;</p>
+	  All first courses on electromagnetism introduce Coulomb's expression for the electric field due to a point charge. Given an electron of charge $-q$, the field at a distance $r$ away would read
+	  $$\mathbf{E} = {-q \over 4\pi\epsilon_0r^2}\hat{\mathbf{e}}_{\mathbf{r}}.$$
+	  Thus, if another electron were to be placed at said location at a distance $r$ from the first one, it would experience the existence of the first electron as a repulsive force, albeit diminished in magnitude due to distance.
+	  <img src="images/r_NWM_elec1.png" width=800>
+	  <p>What if one were to move the first electron? How soon would the second electron detect this change? And in what manner?</p>
+	  <p>It is possible (though not necessarily useful) to reduce all of Maxwell's equations into a form well suited for discussing point charges such as these. To quote from Richard P. Feynman's "Lectures on Physics Vol. I," chapter 28, the full form looks like</p>
+	  $$\mathbf{E}=\frac{-q}{4\pi\epsilon_0}\left[\frac{\hat{\mathbf e}_{\mathbf r'}}{r'^2} + \frac{r'}{c}\frac{d}{dt}\left(\frac{\hat{\mathbf e}_{\mathbf r'}}{r'^2}\right)+\frac{1}{c^2}\frac{d^2}{dt^2}\hat{\mathbf e}_{\mathbf r'}\right].$$
+	  <p>The little prime on $r$ is meant to account for the time-delay for information to travel from the electron to the measurement point. $r'$ is the retarded distance, and $\hat{\mathbf e}_{\mathbf r'}$ the apparent direction pointing towards where the source electron was located at a time $r'/c$ ago.</p>
+	  The first two terms are merely the Coulombic field, and a first-order temporal correction to it. The both of them scale as $1/r^2$, and can be neglected at large distances. The third term, however, depends on the transverse/lateral acceleration (i.e. perpendicular to the line-of-sight) of the source electron, and falls slower than the Coulombic terms with distance:
+	  $$E_\perp = \frac{-q}{4\pi\epsilon_0c^2r}a_\perp\left(t-\frac{r}{c}\right).$$
+	  This indicates that the electromagnetic field has a sluggish quality to it that causes rapid disturbances to spread out in space at speed $c$. It also implies that accelerating charges radiate energy. We see this in synchrotron radiation, and use it in free-space communication technologies. The $1/r$ slow fall-off is also the reason light emitted by electronic motion in a galaxy 5 billion light-years away can be picked up by CCD detectors here on earth.
+	  <img src="images/r_NWM_elec2.gif" width=800>	    
 	  <p>&nbsp;</p>	  
 	  <a name="ant"><h3>One antenna, two antennae (Coming Soon)</h3></a>
 	  <p>&nbsp;</p>	  
