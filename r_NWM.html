@@ -72,7 +72,7 @@
 	  <p>&nbsp;</p>	  
 	  <a name="elec"><h3>Consider the electron</h3></a>
 	  <p>&nbsp;</p>
-	  All first courses on electromagnetism introduce Coulomb's expression for the electric field due to a point charge. Given an electron of charge $-q$, the field at a distance $r$ away would read
+	  All first courses on electromagnetism introduce Coulomb's expression for the electric field due to a point charge. Given an electron with charge $-q$, the field at a distance $r$ away would read
 	  $$\mathbf{E} = {-q \over 4\pi\epsilon_0r^2}\hat{\mathbf{e}}_{\mathbf{r}}.$$
 	  Thus, if another electron were to be placed at said location at a distance $r$ from the first one, it would experience the existence of the first electron as a repulsive force, albeit diminished in magnitude due to distance.
 	  <img src="images/r_NWM_elec1.png" width=800>
@@ -80,13 +80,35 @@
 	  <p>It is possible (though not necessarily useful) to reduce all of Maxwell's equations into a form well suited for discussing point charges such as these. To quote from Richard P. Feynman's "Lectures on Physics Vol. I," chapter 28, the full form looks like</p>
 	  $$\mathbf{E}=\frac{-q}{4\pi\epsilon_0}\left[\frac{\hat{\mathbf e}_{\mathbf r'}}{r'^2} + \frac{r'}{c}\frac{d}{dt}\left(\frac{\hat{\mathbf e}_{\mathbf r'}}{r'^2}\right)+\frac{1}{c^2}\frac{d^2}{dt^2}\hat{\mathbf e}_{\mathbf r'}\right].$$
 	  <p>The little prime on $r$ is meant to account for the time-delay for information to travel from the electron to the measurement point. $r'$ is the retarded distance, and $\hat{\mathbf e}_{\mathbf r'}$ the apparent direction pointing towards where the source electron was located at a time $r'/c$ ago.</p>
-	  The first two terms are merely the Coulombic field, and a first-order temporal correction to it. The both of them scale as $1/r^2$, and can be neglected at large distances. The third term, however, depends on the transverse/lateral acceleration (i.e. perpendicular to the line-of-sight) of the source electron, and falls off slower than the Coulombic terms with distance:
+	  The first two terms are merely the Coulombic field, and a first-order temporal correction to it. The both of them scale as $1/r^2$, and can be neglected at large distances. The third term, however, depends on the transverse/lateral acceleration (i.e. perpendicular to the line-of-sight) of the source electron, and falls off with distance, at a rate slower than the Coulombic terms:
 	  $$E_\perp = \frac{-q}{4\pi\epsilon_0c^2r}a_\perp\left(t-\frac{r}{c}\right).$$
-	  This indicates that the electromagnetic field has a sluggish quality to it that causes rapid disturbances to spread out in space at speed $c$. It also implies that accelerating charges radiate energy. We see this in synchrotron radiation, and use it in free-space communication technologies. The $1/r$ slow fall-off is also the reason light emitted by electronic motion in a galaxy 5 billion light-years away can be picked up by CCD detectors here on earth.
+	  This indicates that the electromagnetic field has a sluggish quality to it that causes rapid disturbances to spread out in space at speed $c$. It also implies that accelerating charges radiate energy. We see this in synchrotron radiation, and use it in free-space communication technologies. The slow, $1/r$ fall-off is also the reason light emitted by electronic motion in a galaxy 5 billion light-years away can be picked up by CCD detectors here on earth.
 	  <img src="images/r_NWM_elec2.gif" width=800>	    
+	  <a name="ant"><h3>One antenna, two antennae</h3></a>
+	  <p>&nbsp;</p>
+	  In practice, it is rather difficult to isolate a single electron, and then cause it to accelerate, and subsequently detect its radiation. However, note that the radiative component of the electric field is separate from the Coulombic components, which can be cancelled by an inertial positive charge placed at the right location. Meaning, we can generate radiation by inducing a bulk acceleration of several free (conductive) electrons in a neutral wire of metal, as is done in typical transmission antennae.
+	  <img src="images/r_NWM_ant01.png" width=600><p>(Image source: Lectures in Physics Vol. I)</p>
+	  <p>&nbsp;</p>	    
+	  Applying a simple, monochrome Sine-wave voltage across a straight metal rod would generate an oscillating dipole field in its vicinity. The efficiency with which said dipole antenna would radiate away energy depends on the length of the rod relative to the wavelength of light at that Sine-wave frequency (this is called impedence-matching), but the basics of our field formula would still hold. If the dipole were aligned along the z-axis in polar coordinates, then the field amplitude would fall off as $1/r$, irrespective of the azimuthal angle $\phi$. But because the field depends on the transverse acceleration of the charges perpendicular to the line of sight, the polar ($\theta$) dependence would be a simple Cosine-projection, and would vanish directly above or below the rod.
+	  <p>&nbsp;</p>
+	  <img src="images/r_NWM_ant02.png" width=300><p>(Image source: Lectures in Physics Vol. I)</p>
+	  <p>&nbsp;</p>
+	  The field structure becomes more interesting when we place two dipole antennae in parallel (at locations $S_1$ and $S_2$ in the above figure), and drive them in sync with the same Sine-wave voltage. Naturally, the both of them would produce their own independent, oscillating-dipole electric fields. The total field would be the vector-sum of the two. And because the fields are sinusoidal, receivers at different locations ($D_1$, $D_2$, $D_3$) would experience the two fields retarded by different amounts, based on the relative distances. Consequently, the two waves would add constructively in some directions, and destructively in others.
 	  <p>&nbsp;</p>	  
-	  <a name="ant"><h3>One antenna, two antennae (Coming Soon)</h3></a>
+	  <img src="images/r_NWM_ant03.png" width=600><p>(Image source: <a href="http://www.falstad.com/ripple/">Falstad</a>)</p>
+	  <p>&nbsp;</p>
+	  The number of hotspot (and cancellation deadzone) sectors around the two antennae is determined by the distance between them, relative to the wavelength of the frequency in question. In the above image, for example, the dipoles are being driven in-phase (i.e. together), and are placed two wavelengths apart. The resulting field distribution is essentially the Young's double-slit interference pattern. We can swap the hotspots with the deadzones by merely shifting one of the dioples in phase by 180 degrees relative to the other, as shown below.
+	  <p>&nbsp;</p>	  	    
+	  <img src="images/r_NWM_ant04.png" width=600><p>(Image source: <a href="http://www.falstad.com/ripple/">Falstad</a>)</p>
+	  <p>&nbsp;</p>
+	  To illustrate the addition of monochrome Sine-waves better, I have created these one-dimensional, unidirectional, toy animations of dipole radiators and receivers. For further simplicity, the $1/r$ decay of the amplitude has also been neglected. If two sources (red and blue) were placed two wavelengths apart and driven in-phase (in sync), then the receiver (green) would indeed see a coherent sum of the two individual waves.
+	  <img src="images/r_NWM_ant05.gif" width=800>	    
+	  If the sources were to be driven out of phase, then naturally, in the collinear direction, the waves would cancel each other.
+	  <img src="images/r_NWM_ant06.gif" width=800>	    
+	  Another way to destructively interfere in the collinear direction while still being driven in-phase is to separate the sources by a distance that is an integer number of wavelengths plus half-a-wavelength, as below.
+	  <img src="images/r_NWM_ant07.gif" width=800>	    
 	  <p>&nbsp;</p>	  
+	    
 	  <a name="con"><h3>In concert (Coming Soon)</h3></a>
 	  <p>&nbsp;</p>	  
 	  <a name="tran"><h3>Transparent materials (Coming Soon)</h3></a>
