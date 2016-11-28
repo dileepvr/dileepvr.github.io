@@ -4,7 +4,7 @@ Tech :-
      	  Future: Tadpole cross-complied executables, Nebula One
 
      Electronics
-	  Current: Slow RGB, LED voltage Bar, Peak detector
+	  Current: Slow RGB, LED voltage Bar
 	  Future: Acoustic interferometer, PT2262 IR, Palm Keyboard, BEAM hunter-runner robots
 
      Optics
@@ -12,5 +12,4 @@ Tech :-
 	  Future: WDM using LEDs and color filters
 
      Other hardware
-     	  Current: Weather balloon
 	  Future: MIDI floppy, RTL-SDR
