@@ -52,6 +52,19 @@
 		<p>Projects involving currents and wires (and other frustrations).</p>
         	<p>&nbsp;</p>		
         	<p>&nbsp;</p>
+		<a name="snsrbrd"><a href="https://github.com/dileepvr/sensorbrd"><h3>Weather balloon external sensor board</h3></a></a>
+		<p>&nbsp;</p>
+		<img src="images/sensorbrd0.jpg" width=800>
+       		<p>&nbsp;</p>
+		<p>The <a href="ohwd.html#balloon">Weather balloon team</a> at the <a href="http://eugenemakerspace.com/">Eugene Maker Space</a> tasked me with coming up with a sensor board that would sit outside of the temperature insulated payload chassis. After some amount of brainstorming, we decided to put a weather chip, a tiny solar panel, and some kind of spectrometer. I decided to construct a poor man's low resolution spectrometer by mixing together photodiodes with different responsivity peaks. So I went with Adafruit's breakout boards for the <a href="https://www.adafruit.com/products/439">TSL2561</a> (reports luminosity, broadband and IR values), the <a href="https://www.adafruit.com/products/1918">GUVA-S12SD</a> UV sensor, and the <a href="https://www.adafruit.com/products/2748">ALS-PT19</a> natural light sensor chip. Adafruit happens to carry a breakout board for the <a href="https://www.adafruit.com/products/2652">BME280</a> temperature, pressure, and humidity sensor chip as well. The idea is to solder all of them on a single PCB.</p>
+		<p>&nbsp;</p>
+		<img src="images/sensorbrd1.jpg" width=800>
+       		<p>&nbsp;</p>
+		<p>All of them are meant to talk to an ATMEGA32u4 microcontroller either through I2C bus, or an analog IN pin (we measured the open-circuit voltage of the solar panel). The microcontroller then periodically (4 times a second) comminucates with a computer inside the payload via a USB connection. The <a href="https://github.com/dileepvr/sensorbrd/tree/master/firmware">firmware</a> relies heavily on the <a href="https://github.com/adafruit/Adafruit_Sensor/archive/master.zip">Adafruit_Sensor</a> arduino libraries. After some calibration, we'd have to think of ways to make it always face the sun!</p>
+		<p>&nbsp;</p>
+		<img src="images/sensorbrd2.jpg" width=800>
+       		  <p>&nbsp;</p>
+        	<p>&nbsp;</p>
 		<a name="spin_half"><a href="https://github.com/dileepvr/spin_half"><h3>Spin-half</h3></a></a>
 		<p>&nbsp;</p>
 		<img src="images/spin_half_schematic.jpg" width=800>
