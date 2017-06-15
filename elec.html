@@ -52,6 +52,19 @@
 		<p>Projects involving currents and wires (and other frustrations).</p>
         	<p>&nbsp;</p>		
         	<p>&nbsp;</p>
+		<a name="snsrbrd"><a href="https://github.com/dileepvr/analog_led_bar"><h3>Analog voltage LED bar display</h3></a></a>
+		<p>&nbsp;</p>
+		<img src="images/analog_led_bar_schematic.png" width=800>
+       		<p>&nbsp;</p>
+		<p>The <a href="https://www.oregoncountryfair.org/">Oregon Country Fair</a> sees regular participation by students and faculty from the Physics department at the University of Oregon. We typically camp at an "ask a scientist" booth inside the "energy park" and set up from demos allowing us to initiate conversations on solar/wind/turbine/energy concepts. The <a href="http://pages.uoregon.edu/stanm/Demo/demo.html">Physics Dept. Demo room</a> had some nifty coils of wire that they'd use to generate e.m.f. by moving a magnet in and out (or side-to-side) in proximity. They were using galvanometers to demonstrate both magnitude and sign of the induced voltage, but it wasn't flashy enough. So I thought I'd throw together a bad-LED setup.</p>
+		<p>&nbsp;</p>
+		<img src="images/analog_led_bar_board.png" width=800>
+       		<p>&nbsp;</p>
+		<p>The basic design would use a resistor-ladder divider to generate voltage-step references, and then use comparators to trigger LEDs. The Texas Instruments LM3914 driver chip does precisely that. Reference everything to some midpoint between the terminals of the power supply, and we get "negative" detection too!</p>
+		<p>&nbsp;</p>
+		<img src="images/analog_led_bar_opt.gif">
+		  <p>&nbsp;</p>
+		<p>&nbsp;</p>		  
 		<a name="snsrbrd"><a href="https://github.com/dileepvr/sensorbrd"><h3>Weather balloon external sensor board</h3></a></a>
 		<p>&nbsp;</p>
 		<img src="images/sensorbrd0.jpg" width=800>
