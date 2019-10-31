@@ -95,6 +95,8 @@ margin-top:15px;
 /*width:204px;*/
 width:308px;
 float:left;
+position: fixed;
+top: 150px;
 }
 
 #leftmenu_top
@@ -177,6 +179,8 @@ color:#000000;
 {
 display:block;
 float:left;
+position: relative;
+left: 310px;
 width:850px;/*689*/
 height:auto;
 padding-left:10px;
