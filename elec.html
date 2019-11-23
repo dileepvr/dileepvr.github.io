@@ -1,122 +1,269 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-<title>Dileep's personal page</title>
+<!-- 2019-11-23 Sat 08:04 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dileep's Personal Webpage</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Dileep V. Reddy">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
-
 <body>
-<div id="container">
-		<div id="header">
-        	<h1>Dileep<span class="off">Reddy</span></h1>
-            <h2>My Overlapping Magisteria</h2>
-        </div>   
-        
-        <div id="menu">
-        	<ul>
-                <li class="menuitem"><a href="index.html">About</a></li>
-                <li class="menuitem"><a href="research.html">Research</a></li>
-                <li class="menuitem"><a href="tech.html">Tech/Play</a></li>
-		<li class="menuitem"><a href="art.html">Art/Play</a></li>
-		<li class="menuitem"><a href="links.html">Links</a></li>
-            </ul>
-        </div>
-        
-        <div id="leftmenu">
-
-        <div id="leftmenu_top"></div>
-
-				<div id="leftmenu_main">    
-                
-                <h3></h3>                        
-                <ul>
-                  <li><a href="repo.html">Git repos</a></li>
-                  <li><a href="code.html">Code end-products</a></li>
-                  <li><a href="elec.html">Electronics</a></li>
-                  <li><a href="opti.html">Optics</a></li>		  
-                  <li><a href="ohwd.html">Other hardware</a></li>		  
-                </ul>
+<div id="preamble" class="status">
+<div id="header">
+  <h1 id="myname">Dileep<span class="off">Reddy</span></h1>
+  <h2>My Overlapping Magisteria</h2>
 </div>
-                
-                
-              <div id="leftmenu_bottom"></div>
-        </div>
-		<div id="content">
-        
-        
-        <div id="content_top"></div>
-        <div id="content_main">
-        	<h2>Electronics</h2>
-        	<p>&nbsp;</p>
-		<p>Projects involving currents and wires (and other frustrations).</p>
-        	<p>&nbsp;</p>		
-        	<p>&nbsp;</p>
-		<a name="snsrbrd"><a href="https://github.com/dileepvr/analog_led_bar"><h3>Analog voltage LED bar display</h3></a></a>
-		<p>&nbsp;</p>
-		<img src="images/analog_led_bar_schematic.png" width=800>
-       		<p>&nbsp;</p>
-		<p>The <a href="https://www.oregoncountryfair.org/">Oregon Country Fair</a> sees regular participation by students and faculty from the Physics department at the University of Oregon. We typically camp at an "ask a scientist" booth inside the "energy park" and set up from demos allowing us to initiate conversations on solar/wind/turbine/energy concepts. The <a href="http://pages.uoregon.edu/stanm/Demo/demo.html">Physics Dept. Demo room</a> had some nifty coils of wire that they'd use to generate e.m.f. by moving a magnet in and out (or side-to-side) in proximity. They were using galvanometers to demonstrate both magnitude and sign of the induced voltage, but it wasn't flashy enough. So I thought I'd throw together a bad-LED setup.</p>
-		<p>&nbsp;</p>
-		<img src="images/analog_led_bar_board.png" width=800>
-       		<p>&nbsp;</p>
-		<p>The basic design would use a resistor-ladder divider to generate voltage-step references, and then use comparators to trigger LEDs. The Texas Instruments LM3914 driver chip does precisely that. Reference everything to some midpoint between the terminals of the power supply, and we get "negative" detection too!</p>
-		<p>&nbsp;</p>
-		<img src="images/analog_led_bar_opt.gif">
-		  <p>&nbsp;</p>
-		<p>&nbsp;</p>		  
-		<a name="snsrbrd"><a href="https://github.com/dileepvr/sensorbrd"><h3>Weather balloon external sensor board</h3></a></a>
-		<p>&nbsp;</p>
-		<img src="images/sensorbrd0.jpg" width=800>
-       		<p>&nbsp;</p>
-		<p>The <a href="ohwd.html#balloon">Weather balloon team</a> at the <a href="http://eugenemakerspace.com/">Eugene Maker Space</a> tasked me with coming up with a sensor board that would sit outside of the temperature insulated payload chassis. After some amount of brainstorming, we decided to put a weather chip, a tiny solar panel, and some kind of spectrometer. I decided to construct a poor man's low resolution spectrometer by mixing together photodiodes with different responsivity peaks. So I went with Adafruit's breakout boards for the <a href="https://www.adafruit.com/products/439">TSL2561</a> (reports luminosity, broadband and IR values), the <a href="https://www.adafruit.com/products/1918">GUVA-S12SD</a> UV sensor, and the <a href="https://www.adafruit.com/products/2748">ALS-PT19</a> natural light sensor chip. Adafruit happens to carry a breakout board for the <a href="https://www.adafruit.com/products/2652">BME280</a> temperature, pressure, and humidity sensor chip as well. The idea is to solder all of them on a single PCB.</p>
-		<p>&nbsp;</p>
-		<img src="images/sensorbrd1.jpg" width=800>
-       		<p>&nbsp;</p>
-		<p>All of them are meant to talk to an ATMEGA32u4 microcontroller either through I2C bus, or an analog IN pin (we measured the open-circuit voltage of the solar panel). The microcontroller then periodically (4 times a second) comminucates with a computer inside the payload via a USB connection. The <a href="https://github.com/dileepvr/sensorbrd/tree/master/firmware">firmware</a> relies heavily on the <a href="https://github.com/adafruit/Adafruit_Sensor/archive/master.zip">Adafruit_Sensor</a> arduino libraries. After some calibration, we'd have to think of ways to make it always face the sun!</p>
-		<p>&nbsp;</p>
-		<img src="images/sensorbrd2.jpg" width=800>
-       		  <p>&nbsp;</p>
-        	<p>&nbsp;</p>
-		<a name="spin_half"><a href="https://github.com/dileepvr/spin_half"><h3>Spin-half</h3></a></a>
-		<p>&nbsp;</p>
-		<img src="images/spin_half_schematic.jpg" width=800>
-       		<p>&nbsp;</p>
-		<p>The <a href="http://scilit.uoregon.edu/">Science Literacy Program</a> at the University of Oregon often funds graduate students to help develop and teach new courses. In 2013, my advisor <a href="http://oco.uoregon.edu/faculty/michael-raymer">Prof. Mike Raymer</a> happened to be creating one called "Quantum Mechanics for Everyone", and asked <a href="https://www.linkedin.com/in/christopher-jackson-82984ba8">Chris Jackson</a> and me to help design and TA the course. Naturally, I accepted.</p>
-		<p>At the time, I was just getting into microcontrollers, and was looking for a project that could use attiny2313 chips. I had to teach Quantum Key Distribution (QKD) to the class, and hence, had to develop an in-class, hands-on activity that would help teach non-majors. This, the spin-half board was born.</p>
-		<p>&nbsp;</p>
-		<img src="images/spin_half_board_front.jpg" width=200>
-       		  <p>&nbsp;</p>
-		  <p>The board has an RGB LED, an SPST switch to change "bases," and three push (tactile) buttons. Onboard surface mount LEDs (red and green) indicate if the current state is the "red/blue" basis, or the "green/white" basis. It fits in the palm of one's hand, and is powered with a coin cell (on the back of the board). <a href="https://github.com/dileepvr/spin_half/blob/master/spin_half_doc.pdf">This document</a> explains how it is meant to be used. It essentially allows a student to function as a spin-half particle, able to respond to external measurements by other students. They then learn to follow the algorithm illustrated in this in-class <a href="https://github.com/dileepvr/spin_half/blob/master/qkd_handout.pdf">handout document</a> and learn to respect the Born rule. The activity involved learning to transmit bits from one student to another, and to study the effects of a third student functioning as an eavesdropper. The board was programmed using the six ICSP header pins using <a href="https://github.com/dileepvr/spin_half/tree/master/avr_code">code</a> written in avr-gcc. I used a USBtinyISP from <a href="https://www.sparkfun.com/">Sparkfun</a> to upload the code using the avrdude interface utility.</p>
-     	<p>&nbsp;</p>
-        	<p>&nbsp;</p>
-		<a name="AM"><a href="images/100kHzAM.pdf"><h3>Low frequency AM receiver</h3></a></a>
-		<p>&nbsp;</p>
-		<img src="images/100kHzAM.png" width=800>
-       		<p>&nbsp;</p>
-		<p>I needed a simple demonstration for AM (amplitude Modulation) based transmission and reception. The primary aim was to demonstrate orthogonality of disjoint frequency bands. And I wanted to do this below 100 kHz, so that a regular oscilloscope could keep up and show some waveforms. DO NOT DO THIS. I was swamped with thermal noise, and just barely got it to work!</p>
-		<p>&nbsp;</p>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/7Buuqx1lRzg?start=240&end=650&version=3" frameborder="0" allowfullscreen></iframe>
-		<p>&nbsp;</p>
-		<p>The transmitter was using analog multiplier chips. I considered making a Gilbert cell by myself, but couldn't find matched transistor pairs. Other lessons learnt: Arrange gain amplifiers at the receiver in descending order such that the largest gain is nearer the antenna. This way, noise at every stage doesn't get amplified at successive stages too much (work this out mathematically. HW assignment!) Also, note that there are low-noise signal (operational) amplifiers that do the voltage translation, and there are power amplifiers, that can actually drive large amounts of current necessary to vibrate a speaker. Use one of those at the end.</p>
-     	<p>&nbsp;</p>
-        	<p>&nbsp;</p>
-		<a name="IR"><h3>Modulating IR diodes for SNR</h3></a>
-		<p>&nbsp;</p>
-		<img src="images/irsignal.gif" width=600> <br>(Source: <a href="http://www.sbprojects.com/knowledge/ir/index.php">SBprojects.com</a>)
-       		<p>&nbsp;</p>
-		    <p>I've attempted to use infrared (IR) emitter-detector pairs in many a project. But unless they are being used as photogates (closely spaced and directly facing each other like IR interrupters), they have always been susceptible to noise. Things got particularly crazy on the <a href="repo.html#spice-pinball">SPICE camp Pinball</a> tables, which would rack up points in the presence of incandescent bulbs in the ceiling. The solution is obvious: upshift the information to a higher frequency where there is lesser environmental noise (which is mostly DC). Then use lockin detection, or bandpass filters followed by a demodulation circuit. Sounds complicated, until you realize that <a href="https://en.wikipedia.org/wiki/Consumer_IR">commercial remote control technology</a> has been doing this for decades.</p>
-		<p>&nbsp;</p>
-		<iframe width="640" height="480" src="https://www.youtube.com/embed/_I6iaBplpXU" frameborder="0" allowfullscreen></iframe>		    
-		    <p>&nbsp;</p>
-		<p>The IR receivers come at various IR wavelengths and carrier frequencies. They are astoundingly sensitive, and can pick my signal out from large distances even in sunlight, as long as there is line of sight. People normally advocate using a microcontroller to do both modulation (at the transmission end), and demodulation (at the receiver end), but I'd recommend offloading mundane tasks to dedicated, dump circuits and keeping the microcontroller scheduler free for important tasks.</p>
-          <p></p>
-<p>&nbsp;</p>
-        </div>
-        <div id="content_bottom"></div>
-            
-            <div id="footer"><h3><a href="http://www.bryantsmith.com">Website based on HTML template by florida web design</a></h3></div>
-      </div>
-   </div>
+
+<div id="back-to-top-button">
+  <a href="#myname">▲ Back to top ▲</a>
+</div>
+
+<div id="menu">
+  <ul>
+    <li class="menuitem"><a href="index.html">About</a></li>
+    <li class="menuitem"><a href="research.html">Research</a></li>
+    <li class="menuitem"><a href="tech.html">Tech/Play</a></li>
+    <li class="menuitem"><a href="art.html">Art/Play</a></li>
+    <li class="menuitem"><a href="links.html">Links</a></li>
+  </ul>
+</div>
+</div>
+<div id="content">
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org6ec7736">Electronics</a></li>
+<li><a href="#org1fa70c9"><b>Analog voltage LED bar display</b></a></li>
+<li><a href="#orgd666b56"><b>Weather balloon external sensor board</b></a></li>
+<li><a href="#org778b638"><b>Spin-half</b></a></li>
+<li><a href="#orgd19d8bf"><b>Low frequency AM receiver</b></a></li>
+<li><a href="#org2893381"><b>Modulating IR diodes for SNR</b></a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org6ec7736" class="outline-2">
+<h2 id="org6ec7736">Electronics</h2>
+<div class="outline-text-2" id="text-org6ec7736">
+<p>
+Projects involving currents and wires (and other frustrations).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fa70c9" class="outline-2">
+<h2 id="org1fa70c9"><a href="https://github.com/dileepvr/analog_led_bar"><b>Analog voltage LED bar display</b></a></h2>
+<div class="outline-text-2" id="text-org1fa70c9">
+
+<figure>
+<img src="img/analog_led_bar_schematic.png" alt="analog_led_bar_schematic.png" width="800">
+
+</figure>
+
+<p>
+The <a href="https://www.oregoncountryfair.org/">Oregon Country Fair</a> sees regular participation by students and
+faculty from the Physics department at the University of Oregon. We
+typically camp at an &ldquo;ask a scientist&rdquo; booth inside the &ldquo;energy park&rdquo; and
+set up from demos allowing us to initiate conversations on
+solar/wind/turbine/energy concepts. The <a href="https://pages.uoregon.edu/stanm/Demo/demo.html">Physics Dept. Demo room</a> had some
+nifty coils of wire that they&rsquo;d use to generate <code>e.m.f.</code> by moving a
+magnet in and out (or side-to-side) in proximity. They were using
+galvanometers to demonstrate both magnitude and sign of the induced
+voltage, but it wasn&rsquo;t flashy enough. So I thought I&rsquo;d throw together a
+bad-LED setup.
+</p>
+
+
+<figure>
+<img src="img/analog_led_bar_board.png" alt="analog_led_bar_board.png" width="800">
+
+</figure>
+
+<p>
+The basic design would use a resistor-ladder divider to generate
+voltage-step references, and then use comparators to trigger LEDs. The
+Texas Instruments <code>LM3914</code> driver chip does precisely that. Reference
+everything to some midpoint between the terminals of the power supply,
+and we get &ldquo;negative&rdquo; detection too!
+</p>
+
+
+<figure>
+<img src="img/analog_led_bar_opt.gif" alt="analog_led_bar_opt.gif">
+
+</figure>
+</div>
+</div>
+
+<div id="outline-container-orgd666b56" class="outline-2">
+<h2 id="orgd666b56"><a href="https://github.com/dileepvr/sensorbrd"><b>Weather balloon external sensor board</b></a></h2>
+<div class="outline-text-2" id="text-orgd666b56">
+
+<figure>
+<img src="img/sensorbrd0.jpg" alt="sensorbrd0.jpg" width="800">
+
+</figure>
+
+<p>
+The <a href="ohwd.html#ID-d3c6249a-293f-4a74-8504-3a02536e54e0">Weather balloon team</a> at the <a href="https://eugenemakerspace.com/">Eugene Maker Space</a> tasked me with coming
+up with a sensor board that would sit outside of the temperature
+insulated payload chassis. After some amount of brainstorming, we decided
+to put a weather chip, a tiny solar panel, and some kind of spectrometer.
+I decided to construct a poor man&rsquo;s low resolution spectrometer by mixing
+together photodiodes with different responsivity peaks. So I went with
+Adafruit&rsquo;s breakout boards for the <a href="https://www.adafruit.com/products/439"><code>TSL2561</code></a> (reports luminosity,
+broadband and IR values), the <a href="https://www.adafruit.com/products/1918"><code>GUVA-S12SD</code></a> UV sensor, and the <a href="https://www.adafruit.com/products/2748"><code>ALS-PT19</code></a>
+natural light sensor chip. Adafruit happens to carry a breakout board for
+the <a href="https://www.adafruit.com/products/2652"><code>BME280</code></a>temperature, pressure, and humidity sensor chip as well. The
+idea is to solder all of them on a single PCB.
+</p>
+
+
+<figure>
+<img src="img/sensorbrd1.jpg" alt="sensorbrd1.jpg" width="800">
+
+</figure>
+
+<p>
+All of them are meant to talk to an ATMEGA32u4 microcontroller either
+through <code>I2C</code> bus, or an analog <code>IN</code> pin (we measured the open-circuit
+voltage of the solar panel). The microcontroller then periodically (4
+times a second) comminucates with a computer inside the payload via a USB
+connection. The <a href="https://github.com/dileepvr/sensorbrd/tree/master/firmware">firmware</a> relies heavily on the <a href="https://github.com/adafruit/Adafruit_Sensor/archive/master.zip">Adafruit-Sensor</a> Arduino
+libraries. After some calibration, we&rsquo;d have to think of ways to make it
+always face the sun!
+</p>
+
+
+<figure>
+<img src="img/sensorbrd2.jpg" alt="sensorbrd2.jpg" width="800">
+
+</figure>
+</div>
+</div>
+
+<div id="outline-container-org778b638" class="outline-2">
+<h2 id="org778b638"><a href="https://github.com/dileepvr/spin_half"><b>Spin-half</b></a></h2>
+<div class="outline-text-2" id="text-org778b638">
+
+<figure>
+<img src="img/spin_half_schematic.jpg" alt="spin_half_schematic.jpg" width="800">
+
+</figure>
+
+<p>
+The <a href="https://scilit.uoregon.edu/">Science Literacy Program</a> at the University of Oregon often funds
+graduate students to help develop and teach new courses. In 2013, my then
+advisor <a href="https://oco.uoregon.edu/faculty/michael-raymer">Prof. Mike Raymer</a> happened to be creating one called &ldquo;Quantum
+Mechanics for Everyone&rdquo;, and asked <a href="https://www.linkedin.com/in/christopher-jackson-82984ba8">Chris Jackson</a> and me to help design
+and TA the course. Naturally, I accepted. At the time, I was just getting
+into microcontrollers, and was looking for a project that could use
+<code>ATTINY2313</code> chips. I had to teach Quantum Key Distribution (QKD) to the
+class, and hence, had to develop an in-class, hands-on activity that
+would help teach non-majors. This, the spin-half board was born.
+</p>
+
+
+<figure>
+<img src="img/spin_half_board_front.jpg" alt="spin_half_board_front.jpg" width="200">
+
+</figure>
+
+<p>
+The board has an RGB LED, an SPST switch to change &ldquo;bases,&rdquo; and three
+push (tactile) buttons. Onboard surface mount LEDs (red and green)
+indicate if the current state is the &ldquo;red/blue&rdquo; basis, or the
+&ldquo;green/white&rdquo; basis. It fits in the palm of one&rsquo;s hand, and is powered
+with a coin cell (on the back of the board). <a href="https://github.com/dileepvr/spin_half/blob/master/spin_half_doc.pdf">This document</a> explains how
+it is meant to be used. It essentially allows a student to function as a
+spin-half particle, able to respond to external measurements by other
+students. They then learn to follow the algorithm illustrated in this
+in-class <a href="https://github.com/dileepvr/spin_half/blob/master/qkd_handout.pdf">handout document</a> and learn to respect the Born rule. The
+activity involved learning to transmit bits from one student to another,
+and to study the effects of a third student functioning as an
+eavesdropper. The board was programmed using the six ICSP header pins
+using <a href="https://github.com/dileepvr/spin_half/tree/master/avr_code">code</a> written in <code>avr-gcc</code>. I used a <code>USBtinyISP</code> from <a href="https://www.sparkfun.com/">Sparkfun</a> to
+upload the code using the avrdude interface utility.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgd19d8bf" class="outline-2">
+<h2 id="orgd19d8bf"><a href="img/100kHzAM.pdf"><b>Low frequency AM receiver</b></a></h2>
+<div class="outline-text-2" id="text-orgd19d8bf">
+
+<figure>
+<img src="img/100kHzAM.png" alt="100kHzAM.png" width="800">
+
+</figure>
+
+<p>
+I needed a simple demonstration for AM (amplitude Modulation) based
+transmission and reception. The primary aim was to demonstrate
+orthogonality of disjoint frequency bands. And I wanted to do this below
+100 kHz, so that a regular oscilloscope could keep up and show some
+waveforms. DO NOT DO THIS. I was swamped with thermal noise, and just
+barely got it to work!
+</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7Buuqx1lRzg?start=240&end=650&version=3" frameborder="0" allowfullscreen></iframe>
+
+<p>
+The transmitter was using analog multiplier chips. I considered making a
+Gilbert cell by myself, but couldn&rsquo;t find matched transistor pairs. Other
+lessons learnt: Arrange gain amplifiers at the receiver in descending
+order such that the largest gain is nearer the antenna. This way, noise
+at every stage doesn&rsquo;t get amplified at successive stages too much (work
+this out mathematically. HW assignment!) Also, note that there are
+low-noise signal (operational) amplifiers that do the voltage
+translation, and there are power amplifiers, that can actually drive
+large amounts of current necessary to vibrate a speaker. Use one of those
+at the end.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2893381" class="outline-2">
+<h2 id="org2893381"><b>Modulating IR diodes for SNR</b></h2>
+<div class="outline-text-2" id="text-org2893381">
+
+<figure>
+<img src="img/irsignal.gif" alt="irsignal.gif" width="600">
+
+<figcaption><span class="figure-number">Figure 10: </span>Source: <a href="https://www.sbprojects.com/knowledge/ir/index.php">SBprojects.com</a></figcaption>
+</figure>
+
+<p>
+I&rsquo;ve attempted to use infrared (IR) emitter-detector pairs in many a
+project. But unless they are being used as photogates (closely spaced and
+directly facing each other like IR interrupters), they have always been
+susceptible to noise. Things got particularly crazy on the <a href="repo.html#ID-a5719355-2a56-4990-b5e7-50b62ac11b80">SPICE camp
+Pinball</a> tables, which would rack up points in the presence of
+incandescent bulbs in the ceiling. The solution is obvious: upshift the
+information to a higher frequency where there is lesser environmental
+noise (which is mostly DC). Then use lockin detection, or bandpass
+filters followed by a demodulation circuit. Sounds complicated, until you
+realize that <a href="https://en.wikipedia.org/wiki/Consumer_IR">commercial remote control technology</a> has been doing this for
+decades.
+</p>
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/_I6iaBplpXU" frameborder="0" allowfullscreen></iframe>
+
+<p>
+The IR receivers come at various IR wavelengths and carrier frequencies.
+They are astoundingly sensitive, and can pick my signal out from large
+distances even in sunlight, as long as there is line of sight. People
+normally advocate using a microcontroller to do both modulation (at the
+transmission end), and demodulation (at the receiver end), but I&rsquo;d
+recommend offloading mundane tasks to dedicated, dump circuits and
+keeping the microcontroller scheduler free for important tasks.
+</p>
+</div>
+</div>
+</div>
 </body>
 </html>

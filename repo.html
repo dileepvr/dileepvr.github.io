@@ -1,114 +1,257 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-<title>Dileep's personal page</title>
+<!-- 2019-11-23 Sat 07:02 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dileep's Personal Webpage</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Dileep V. Reddy">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
-
 <body>
-<div id="container">
-		<div id="header">
-        	<h1>Dileep<span class="off">Reddy</span></h1>
-            <h2>My Overlapping Magisteria</h2>
-        </div>   
-        
-        <div id="menu">
-        	<ul>
-                <li class="menuitem"><a href="index.html">About</a></li>
-                <li class="menuitem"><a href="research.html">Research</a></li>
-                <li class="menuitem"><a href="tech.html">Tech/Play</a></li>
-		<li class="menuitem"><a href="art.html">Art/Play</a></li>
-		<li class="menuitem"><a href="links.html">Links</a></li>
-            </ul>
-        </div>
-        
-        <div id="leftmenu">
-
-        <div id="leftmenu_top"></div>
-
-				<div id="leftmenu_main">    
-                
-                <h3></h3>                        
-                <ul>
-                  <li><a href="repo.html">Git repos</a></li>
-                  <li><a href="code.html">Code end-products</a></li>
-                  <li><a href="elec.html">Electronics</a></li>
-                  <li><a href="opti.html">Optics</a></li>		  
-                  <li><a href="ohwd.html">Other hardware</a></li>		  
-                </ul>
+<div id="preamble" class="status">
+<div id="header">
+  <h1 id="myname">Dileep<span class="off">Reddy</span></h1>
+  <h2>My Overlapping Magisteria</h2>
 </div>
-                
-                
-              <div id="leftmenu_bottom"></div>
-        </div>
-		<div id="content">
-        
-        
-        <div id="content_top"></div>
-        <div id="content_main">
-        	<h2>Git repos</h2>
-        	<p>&nbsp;</p>
-		<p> <a href="https://git-scm.com/">Git</a> is a free and open source, version-control software. <a href="https://github.com">Github</a> is a private company that has thrown its servers open to the public to store their git repositories online for free (subject to size constraints). This frees people from the hassle of setting up their own online repos, and aids in small-scale collaborative coding. My own github page can be found at <a href="https://github.com/dileepvr">https://github.com/dileepvr</a>. While most of them have licenses and README files, some of them have interesting stories behind them.</p>
-		<p>&nbsp;</p>
-		<a name="spice-pinball"><a href="https://github.com/dileepvr/spice-pinball"><h3>spice-pinball</h3></a></a>
-		<p>&nbsp;</p>
-		<p> The <a href="http://oco.uoregon.edu/">Oregon Center for Optical, Molecular, & Quantum Science</a>, under the direction of its assistant Director <a href="http://oco.uoregon.edu/contact-us">Dr. Brandy Todd</a>, has been hosting <a href="http://spicescience.uoregon.edu/spice/join">SPICE CAMP</a> at the University of Oregon for several summers now. It is typically billed as a two-week long, science and engineering camp for middle-school girls, although the definition undergoes subtle changes every iteration. The camp itself is split into three tracks: Discovery (for 6th graders), Forensics (for 7th graders), and Engineering (for 8th graders). Participants are expected to attend all three tracks over three summers.</p>
-		<p>&nbsp;</p>
-		<img src="images/spice_camp.jpg" width=800>
-		  <p>&nbsp;</p>
-		  <p>I got involved with SPICE when a friend with a shared interest in beam-robotics convinced me to volunteer for it. I was tasked with leading some Engineering camp sessions, and designing/debugging/assembling electronics for it. One year, we decided to add microcontroller programming to the curriculum, and I was asked to design and teach a few pilot sessions on it. Based on the feedback, we decided to make Arduino programming a core component of the camp. As it stands to day, the engineering camp has the participant teams learning to program an Atmega32u4 using the Arduino IDE, learning to use various sensors (piezo elements, push-buttons, IR detectors) and actuators with it, and ultimately integrating the whole into a fully functional pinball table. And I've been writing and maintaining some libraries in this <a href="https://github.com/dileepvr/spice-pinball">git repository</a> to make the coding easier to implement and parse.</p>
-		  <p>&nbsp;</p>
-		  <p>The lessons/sessions have been neatly formatted into a <a href="http://agoering.github.io/spice-pinball/">hypertext tutorial-style website</a> by <a href="https://www.linkedin.com/in/andreagoering">Andrea Goering</a>. <a href="http://pages.uoregon.edu/wwe/">Wes Erickson</a> and Cody Jarrett have also been fellow contributors. Some of the functionality (like the motor H-bridge) requires custom PCBs to function. The library itself is very transparent and convenient. I find myself often using it in other projects when I don't want to bother with internal timer and interrupt registers for the avr chips that power the whole thing. This library has been released under a modified version of the MIT license.</p>
-		<p>&nbsp;</p>
-		<a name="decks"><a href="https://github.com/dileepvr/decks"><h3>decks</h3></a></a>
-		<p>&nbsp;</p>
-	          <p>CARD COUNTING IS LEGAL.</p>
-		  <p>&nbsp;</p>
-		  <p>The best (worst?) a casino can do if they suspect you of it is to bar you from playing blackjack, and share your face and name with all associated casinos using a distributed blacklist maintained by one of many dedicated private companies. This repository contains code meant to simulate blackjack games under various house rules and counting strategies. So far, I've only implemented dealer-vs-single-player, but this could easily be extended to multiple players at the same table, each at various positions using their own strategies. This is able to reproduce results from other independent sources pretty well, so I've trusted it enough to base decisions on it during my own <a href="http://rightshift.info/starterkit/home/Card-Counting">adventures</a>.</p>
-		<p>&nbsp;</p>
-		<img src="images/two_deck_tchist_spread.png" width=800>
-		  <p>&nbsp;</p>
-		  <p>The code is written in C, and I've released it under the MIT license. The file main.cu exists in the repo because at one point, I considered using this project to teach myself some cuda-GPU programming. I have since found other avenues for that goal.
-		<p>&nbsp;</p>
-		<a name="Tadpole_SDL"><a href="https://github.com/dileepvr/Tadpole_SDL"><h3>Tadpole_SDL</h3></a></a>
-		  <p>&nbsp;</p>
-		  <img src="images/frog_sprites2.png" width=600>
-		  <p>&nbsp;</p>
-	          <p>Ever since I played my first videogame, I've wanted to make one from scratch. This dream is yet to be fully satisfied (watch this space). Tadpole was an early attempt at a casual, 2D, sprite-based arcade experience. In more recent times, I've been very interested in socket programming, and network protocols. I decided to turn the software into a casual, live multiplayer, party game. The idea is to have the game server persistently running on a projector at a gathering. The game can spawn players at any time for every instance of a TCP socket being opened and the right information exchanged (ideally, this should be done over local wifi). The objective is to stay alive as long as possible, and climb the hi-score board.</p>
-		  <p>&nbsp;</p>
-		  <iframe width="640" height="480" src="https://www.youtube.com/embed/WrZMrjpVtzY" frameborder="0" allowfullscreen></iframe>
-		  <p>&nbsp;</p>
-		  <p><a href="http://pages.uoregon.edu/wwe/">Wes Erickson</a> is working on a <a href="https://github.com/inflamedspirit/Tadpole_Controller">Javascript controller</a>, which would allow one to name and spawn a player, and control it via the browser by visiting a url. So this could be played on cellphones. I intend to make some hardware controllers on breadboards for this as well (watch this space). The rest of the code has been sucessfully field tested.</p>
-		  <p>&nbsp;</p>
-		  <iframe width="640" height="480" src="https://www.youtube.com/embed/ctRMMRXPL_Y" frameborder="0" allowfullscreen></iframe>
-		  <p>&nbsp;</p>		  
-		  <p> I had a lot of fun coding the AI for this. The frogs show pack behavior. They are aware of each other's movements and will try to flank you, guard the fly, and so on. The background waves are all sequences of sprites with an alpha-channel transparency layer. The sound effects are from creative commons licensed files floating about on the web. Someday, I hope to port it to render with openGL or openGL_ES, so as to exploit hardware acceleration.
-		<p>&nbsp;</p>		  		  
-		<a name="novenaX_kicad"><a href="https://github.com/dileepvr/novenaX_kicad"><h3>novenaX_kicad</h3></a></a>
-		<p>&nbsp;</p>
-	          <p>If you've followed my blog posts on <a href="http://rightshift.info">Rightshift</a>, you'll know of Project Novena-X. I am building a laptop around the <a href="https://www.kosagi.com/w/index.php?title=Novena_Main_Page">Novena Motherboard</a>. I have gone a bit crazy with the project, and am trying to interface with a rediculously proprietary, backlit, Dell keyboard (0wx4jf), and also deck the front display panel out with a character LCD module, an E-ink display, as well as internal i2c devices and an nRF24l01+ module.</p>
-		  <p>&nbsp;</p>
-		  <img src="images/novena_concept.jpg" width=800>
-		    <p>&nbsp;</p>
-		    <p>The circuitry meant to interface between all of these diverse elements is relying on USB hubs and a bunch of avr microcontrollers (the schematics can be found in the repo). I have laid them out on 2-layer PCBs using the open-source <a href="http://kicad-pcb.org/">kicad</a> suite, which I happen to use for all my PCB (printed circuit board) projects.</p>
-		  <p>&nbsp;</p>
-		  <img src="images/novena_newboard.jpg" width=800>
-		    <p>&nbsp;</p>
-		    The layout has undergone some iterations. I am currently testing the various subsystems to see if they work independently.
-		  <p>&nbsp;</p>
-		  <img src="images/novena_full_PCB.jpg" width=800>
-		    <p>&nbsp;</p>
-		    I am using <a href="https://oshpark.com/">OSHPark</a> as a PCB printing service. They print 2-layer boards at $5 per square inch (with 3 copies of the board included in that price). They also print 4-layer boards at a different prince. Just upload the zip file inside the gerber folder of the project <a href="https://github.com/dileepvr/novenaX_kicad">repository</a> unto their website and you are good to go.</p>
-		  <p>&nbsp;</p>
-		  <img src="images/novena_PCBs.jpg" width=800>
-          <p></p>
-<p>&nbsp;</p>
-        </div>
-        <div id="content_bottom"></div>
-            
-            <div id="footer"><h3><a href="http://www.bryantsmith.com">Website based on HTML template by florida web design</a></h3></div>
-      </div>
-   </div>
+
+<div id="back-to-top-button">
+  <a href="#myname">▲ Back to top ▲</a>
+</div>
+
+<div id="menu">
+  <ul>
+    <li class="menuitem"><a href="index.html">About</a></li>
+    <li class="menuitem"><a href="research.html">Research</a></li>
+    <li class="menuitem"><a href="tech.html">Tech/Play</a></li>
+    <li class="menuitem"><a href="art.html">Art/Play</a></li>
+    <li class="menuitem"><a href="links.html">Links</a></li>
+  </ul>
+</div>
+</div>
+<div id="content">
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org5347bf6">Git repos</a></li>
+<li><a href="#org4183e0a"><b>spice-pinball</b></a></li>
+<li><a href="#org2b21167"><b>decks</b></a></li>
+<li><a href="#org59f2b3e"><b>Tadpole-SDL</b></a></li>
+<li><a href="#org0cead6b"><b>novenaX-kicad</b></a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org5347bf6" class="outline-2">
+<h2 id="org5347bf6">Git repos</h2>
+<div class="outline-text-2" id="text-org5347bf6">
+<p>
+<a href="https://git-scm.com/">Git</a> is a free and open source, version-control software. <a href="https://github.com">Github</a> is a
+private company that has thrown its servers open to the public to store
+their git repositories online for free (subject to size constraints).
+This frees people from the hassle of setting up their own online
+repositories, and aids in small-scale collaborative coding. My own github
+page can be found at <a href="https://github.com/dileepvr">https://github.com/dileepvr</a>. While most of them have
+licenses and README files, some of them have interesting stories behind
+them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4183e0a" class="outline-2">
+<h2 id="org4183e0a"><a href="https://github.com/dileepvr/spice-pinball"><b>spice-pinball</b></a></h2>
+<div class="outline-text-2" id="text-org4183e0a">
+<p>
+<a href="https://oco.uoregon.edu/">Oregon Center for Optical, Molecular, &amp; Quantum Science</a>, under the
+direction of its assistant Director <a href="https://oco.uoregon.edu/contact-us">Dr. Brandy Todd</a>, has been hosting
+<a href="https://spicescience.uoregon.edu/spice/join">SPICE CAMP</a> at the University of Oregon for several summers now. It is
+typically billed as a two-week long, science and engineering camp for
+middle-school girls, although the definition undergoes subtle changes
+every iteration. The camp itself is split into three tracks: Discovery
+(for 6th graders), Forensics (for 7th graders), and Engineering (for 8th
+graders). Participants are expected to attend all three tracks over three
+summers.
+</p>
+
+
+<figure>
+<img src="img/spice_camp.jpg" alt="spice_camp.jpg" width="800">
+
+</figure>
+
+
+<p>
+I got involved with SPICE when a friend with a shared interest in
+beam-robotics convinced me to volunteer for it. I was tasked with leading
+some Engineering camp sessions, and designing/debugging/assembling
+electronics for it. One year, we decided to add microcontroller
+programming to the curriculum, and I was asked to design and teach a few
+pilot sessions on it. Based on the feedback, we decided to make Arduino
+programming a core component of the camp. As it stands to day, the
+engineering camp has the participant teams learning to program an
+Atmega32u4 using the Arduino IDE, learning to use various sensors (piezo
+elements, push-buttons, IR detectors) and actuators with it, and
+ultimately integrating the whole into a fully functional pinball table.
+And I&rsquo;ve been writing and maintaining some libraries in this <a href="https://github.com/dileepvr/spice-pinball">git
+repository</a> to make the coding easier to implement and parse.
+</p>
+
+<p>
+The lessons/sessions have been neatly formatted into a <a href="https://agoering.github.io/spice-pinball/">hypertext
+tutorial-style website</a> by <a href="https://www.linkedin.com/in/andreagoering">Andrea Goering</a>. <a href="https://pages.uoregon.edu/wwe/">Wes Erickson</a> and Cody Jarrett
+have also been fellow contributors. Some of the functionality (like the
+motor H-bridge) requires custom PCBs to function. The library itself is
+very transparent and convenient. I find myself often using it in other
+projects when I don&rsquo;t want to bother with internal timer and interrupt
+registers for the avr chips that power the whole thing. This library has
+been released under a modified version of the MIT license.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b21167" class="outline-2">
+<h2 id="org2b21167"><a href="https://github.com/dileepvr/decks"><b>decks</b></a></h2>
+<div class="outline-text-2" id="text-org2b21167">
+<p>
+CARD COUNTING IS LEGAL.
+</p>
+
+<p>
+The best (worst?) a casino can do if they suspect you of it is to bar you
+from playing blackjack, and share your face and name with all associated
+casinos using a distributed blacklist maintained by one of many dedicated
+private companies. This repository contains code meant to simulate
+blackjack games under various house rules and counting strategies. So
+far, I&rsquo;ve only implemented dealer-vs-single-player, but this could easily
+be extended to multiple players at the same table, each at various
+positions using their own strategies. This is able to reproduce results
+from other independent sources pretty well, so I&rsquo;ve trusted it enough to
+base decisions on it during my own <a href="http://rightshift.info/starterkit/home/Card-Counting">adventures</a>.
+</p>
+
+
+<figure>
+<img src="img/two_deck_tchist_spread.png" alt="two_deck_tchist_spread.png" width="800">
+
+</figure>
+
+<p>
+The code is written in C, and I&rsquo;ve released it under the MIT license. The
+file main.cu exists in the repo because at one point, I considered using
+this project to teach myself some cuda-GPU programming. I have since
+found other avenues for that goal.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org59f2b3e" class="outline-2">
+<h2 id="org59f2b3e"><a href="https://github.com/dileepvr/Tadpole_SDL"><b>Tadpole-SDL</b></a></h2>
+<div class="outline-text-2" id="text-org59f2b3e">
+
+<figure>
+<img src="img/frog_sprites2.png" alt="frog_sprites2.png" width="600">
+
+</figure>
+
+<p>
+Ever since I played my first videogame, I&rsquo;ve wanted to make one from
+scratch. This dream is yet to be fully satisfied (watch this space).
+Tadpole was an early attempt at a casual, 2D, sprite-based arcade
+experience. In more recent times, I&rsquo;ve been very interested in socket
+programming, and network protocols. I decided to turn the software into a
+casual, live multiplayer, party game. The idea is to have the game server
+persistently running on a projector at a gathering. The game can spawn
+players at any time for every instance of a TCP socket being opened and
+the right information exchanged (ideally, this should be done over local
+wifi). The objective is to stay alive as long as possible, and climb the
+hi-score board.
+</p>
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/WrZMrjpVtzY" frameborder="0" allowfullscreen></iframe>
+
+<p>
+<a href="https://pages.uoregon.edu/wwe/">Wes Erickson</a> is working on a <a href="https://github.com/inflamedspirit/Tadpole_Controller">Javascript controller</a>, which would allow one
+to name and spawn a player, and control it via the browser by visiting a
+url. So this could be played on cellphones. I intend to make some
+hardware controllers on breadboards for this as well (watch this space).
+The rest of the code has been sucessfully field tested.
+</p>
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/ctRMMRXPL_Y" frameborder="0" allowfullscreen></iframe>
+
+<p>
+I had a lot of fun coding the AI for this. The frogs show pack behavior.
+They are aware of each other&rsquo;s movements and will try to flank you, guard
+the fly, and so on. The background waves are all sequences of sprites
+with an alpha-channel transparency layer. The sound effects are from
+creative commons licensed files floating about on the web. Someday, I
+hope to port it to render with <code>openGL</code> or <code>openGL_ES</code>, so as to exploit
+hardware acceleration.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0cead6b" class="outline-2">
+<h2 id="org0cead6b"><a href="https://github.com/dileepvr/novenaX_kicad"><b>novenaX-kicad</b></a></h2>
+<div class="outline-text-2" id="text-org0cead6b">
+<p>
+If you&rsquo;ve followed my blog posts on <a href="http://rightshift.info">Rightshift</a>, you&rsquo;ll know of Project
+Novena-X. I am building a laptop around the <a href="https://www.kosagi.com/w/index.php?title=Novena_Main_Page">Novena Motherboard</a>. I have
+gone a bit crazy with the project, and am trying to interface with a
+rediculously proprietary, backlit, Dell keyboard (<code>0wx4jf</code>), and also
+deck the front display panel out with a character LCD module, an E-ink
+display, as well as internal <code>i2c</code> devices and an <code>nRF24l01+</code> module.
+</p>
+
+
+<figure>
+<img src="img/novena_concept.jpg" alt="novena_concept.jpg" width="800">
+
+</figure>
+
+<p>
+The circuitry meant to interface between all of these diverse elements is
+relying on USB hubs and a bunch of avr microcontrollers (the schematics
+can be found in the repo). I have laid them out on 2-layer PCBs using the
+open-source <a href="http://kicad-pcb.org/">kicad</a> suite, which Ihappen to use for all my PCB (printed
+circuit board) projects.
+</p>
+
+
+<figure>
+<img src="img/novena_newboard.jpg" alt="novena_newboard.jpg" width="800">
+
+</figure>
+
+<p>
+The layout has undergone some iterations. I am currently testing the
+various subsystems to see if they work independently.
+</p>
+
+
+<figure>
+<img src="img/novena_full_PCB.jpg" alt="novena_full_PCB.jpg" width="800">
+
+</figure>
+
+<p>
+I am using <a href="https://oshpark.com/">OSHPark</a> as a PCB printing service. They print 2-layer boards
+at $5 per square inch (with 3 copies of the board included in that
+price). They also print 4-layer boards at a different prince. Just upload
+the zip file inside the gerber folder of the project <a href="https://github.com/dileepvr/novenaX_kicad">repository</a> unto
+their website and you are good to go.
+</p>
+
+
+<figure>
+<img src="img/novena_PCBs.jpg" alt="novena_PCBs.jpg" width="800">
+
+</figure>
+</div>
+</div>
+</div>
 </body>
 </html>

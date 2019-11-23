@@ -1,136 +1,292 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-<title>Dileep's personal page</title>
+<!-- 2019-11-23 Sat 08:17 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dileep's Personal Webpage</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Dileep V. Reddy">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
-
 <body>
-<div id="container">
-		<div id="header">
-        	<h1>Dileep<span class="off">Reddy</span></h1>
-            <h2>My Overlapping Magisteria</h2>
-        </div>   
-        
-        <div id="menu">
-        	<ul>
-                <li class="menuitem"><a href="index.html">About</a></li>
-                <li class="menuitem"><a href="research.html">Research</a></li>
-                <li class="menuitem"><a href="tech.html">Tech/Play</a></li>
-		<li class="menuitem"><a href="art.html">Art/Play</a></li>
-		<li class="menuitem"><a href="links.html">Links</a></li>
-            </ul>
-        </div>
-        
-        <div id="leftmenu">
-
-        <div id="leftmenu_top"></div>
-
-				<div id="leftmenu_main">    
-                
-                <h3></h3>                        
-                <ul>
-                  <li><a href="repo.html">Git repos</a></li>
-                  <li><a href="code.html">Code end-products</a></li>
-                  <li><a href="elec.html">Electronics</a></li>
-                  <li><a href="opti.html">Optics</a></li>		  
-                  <li><a href="ohwd.html">Other hardware</a></li>		  
-                </ul>
+<div id="preamble" class="status">
+<div id="header">
+  <h1 id="myname">Dileep<span class="off">Reddy</span></h1>
+  <h2>My Overlapping Magisteria</h2>
 </div>
-                
-                
-              <div id="leftmenu_bottom"></div>
-        </div>
-		<div id="content">
-        
-        
-        <div id="content_top"></div>
-        <div id="content_main">
-          <h2>Miscellany</h2>
-        	<p>&nbsp;</p>
-                <p>&nbsp;</p>
-		<a name="balloon"><h3>Nearspace Weather Balloon</h3></a>
-	  <p></p>           	<p>&nbsp;</p>
-		<img src="images/balloon_01.jpg" width=800>
-       		  <p>&nbsp;</p>
-		  <p>In July of 2016, I bumped into the <a href="http://eugenemakerspace.com/">Eugene Maker Space</a> at the local faire through a friend (Dean Walton) on campus. They (Rick Osgood, Weston Turner) were showcasing a payload that they intended to send up above the stratosphere tethered to a weather balloon. They had my attention.</p>
-       		  <p>&nbsp;</p>		  
-		<img src="images/balloon_02.jpg" width=800>
-       		  <p>&nbsp;</p>
-		  <p>The payload consisted of a raspberry pi, a handheld programmable radio, a TNC inbetween the two, a camera, and a GPS module. While most such payloads include a cellphone, the FCC frowns on that practice. This might have something to do with catching too many cell towers at once. This one however was programmed to transmit it's coordinates via standard APRS radio packets. I offered my BME280 weather chip breakout board to the setup so we could monitor temperature, pressure, and humidity as well. The chassis was designed and put together by Jeffrey Graman.</p>
-       		  <p>&nbsp;</p>		  
-		<img src="images/balloon_03.jpg" width=800>
-       		  <p>&nbsp;</p>
-		  <p> Kevin Forsyth also designed a second payload with several raspberry pis' and cameras as a panoramic photoshoot device. There exist prediction applets that chart expected balloon paths after taking payload weights, balloon size, amount of Helium, and date/time/location of launch as inputs. We launched ours from central Oregon a few hours later than scheduled. The path didn't drift significantly. We had to give chase in our cars (and eventually on foot) for nearly four hours, all the while receiving live packets from the payload and displaying the coordinates on a map in our laptops (and radioing information to the rest of the convoy). It turns out that others in neighboring towns (including Eugene) had also received strange APRS packets with ridiculous altitude values.</p>
-       		  <p>&nbsp;</p>		  
-		<img src="images/balloon_04.jpg" width=800>
-       		  <p>&nbsp;</p>
-		  <p>The balloon popped above 80,000 feet. The chassis was well insulated, rendering the temperature and pressure data only contextually interesting. The best part of the trip was to actually catch visual sight of the balloon at its highest point (the balloon expands in size as it rises into thinner air), and watch it burst (suddenly disappear). We lost radio contact with it for a while during the parachuted descent, but recovered it as we got closer to its expected drop point. Finding it dangling off of a tree branch was pretty cool too. The EMS will be planning another launch with an expanded team, a better chassis, and a more sophisticated payload (with external sensors). We're waiting for the weather to get better.</p>
-       		  <p>&nbsp;</p>
-		  <iframe width="560" height="315" src="https://www.youtube.com/embed/MVd1E8uFlsE" frameborder="0" allowfullscreen></iframe>		  
-	  <p>&nbsp;</p>
-        	<p>&nbsp;</p>
-		<a name="mercury"><h3>Transit of Mercury</h3></a>
-		<p></p>           	<p>&nbsp;</p>
-		<img src="images/transitofmercury_01.jpg" width=800>
-		  <p>(Photo credit: <a href="https://about.me/DeyWalt">Dean Walton</a>)</p>
-       		  <p>&nbsp;</p>
-		  <p>On the 9th of May 2016, the planet Mercury happened to slowly transit across the face of the Sun (from Earth's perspective). Prof. <a href="http://physics.uoregon.edu/profile/rsf/">Scott Fischer</a>, <a href="https://about.me/DeyWalt">Dean Walton</a>, Erik Keever and I decided to deploy two telescopes out in the open on campus. One of them employed interference-based bandpass filters at the Helium alpha line (667.8 nm). The other was a Newtonian type, 10" Dobsonian scope, and was used to project an image of the Sun onto a board. The Sun was bright enough for a clean image even in broad daylight.</p>
-       		  <p>&nbsp;</p>		  
-		  <img src="images/transitofmercury_02.jpg" width=800>
-		  <p>(Photo credit: <a href="https://about.me/DeyWalt">Dean Walton</a>)</p>		    
-       		  <p>&nbsp;</p>		  		    
-		  <p>The transit was already in progress as the Sun rose on the west coast. The entire transit took 8 hours to run through its course. We were out until about 12 PM local time. It managed to attract some public attention.</p>		    
-       		  <p>&nbsp;</p>		  
-		  <img src="images/transitofmercury_03.jpg" width=800>
-		  <p>(Photo credit: <a href="https://about.me/DeyWalt">Dean Walton</a>)</p>		    
-       		  <p>&nbsp;</p>		  		    
-		  <p>Unlike Venus, mercurial transits are relatively more common. They occur about 13 to 33 years apart. Despite the orbital period of Mercury being about 88 Earth-days, the planar tilt of its orbit is opposite that of the Earth. Its day-night cycle is tidally locked to its orbital period to a ratio of 3/2. The planet's silhouette was about 1/160th the diameter of the Sun. A bit of an anti-climax, really, unless you know what you are looking at.</p>		    
-        	<p>&nbsp;</p>
-        	<p>&nbsp;</p>
-		<a name="CD"><h3>CD-drive shenanigans</h3></a>
-		<p></p>           	<p>&nbsp;</p>
-		<img src="images/cddrive01.jpg" width=800>
-       		  <p>&nbsp;</p>
-		  <p>I do some volunteer work for <a href="http://spicescience.uoregon.edu/">SPICE Camp</a> every summer, as is mentioned <a href="repo.html"> elsewhere</a>. And one of the most loved exercises is the one where we get the kids to take old, surplused computer towers apart for parts. Most of them have never seen the guts before, and they are natural destroyers of things. Back in 2013, during a routine brainstorming session on possible new activities for the camp, we (<a href="http://pages.uoregon.edu/wwe/">Wes</a> and I) attempted to create a project where parts from CD-drives and hard disks (the voice coil or readhead) could be put together to make 2D plotters and scanners. We ended up scrapping the idea on account of the design being to unreliable and time consuming. But we did successfully create some prototypes.</p>
-		  <p>&nbsp;</p>
-		  <iframe width="640" height="480" src="https://www.youtube.com/embed/a_5HK0wdDYE" frameborder="0" allowfullscreen></iframe>
-		  <p>&nbsp;</p>
-		  <iframe width="640" height="480" src="https://www.youtube.com/embed/0iV6Bp7krnI" frameborder="0" allowfullscreen></iframe>
-		  <p>&nbsp;</p>
-		  <p>Linear stages are a pain to deal with. Having dabbled in trying to make a reprap, I am intimately familiar with that pain. The drive trays are controlled by DC motors. Some read heads are controlled by DC motors, and others by stepper motors. To work with DC motors and get an estimate of distance travelled, we used photogates (IR interrupters) and black patterns printed onto transparencies.</p>
-		<p>&nbsp;</p>
-		<img src="images/cddrive02.jpg" width=800>
-       		<p>&nbsp;</p>
-		<p>We had end-stops for edge-limit detection, and a startup, full travel routine to estimate maximum range for both directions. All the "images" were ascii files with a dot for blank space, an "x" for marked pixel, and an "n" for new line. The scanner simply used a photodiode to measure reflection from a laser pointer. The plotter however, used a hard-drive voice coil to lift and drop the pen. This was a huge mistake, as it was heavy, and tended to jerk the whole light device out of alignment. The drop and lift angles weren't vertical either, and voice coils are a huge power draw. All of these were controlled by custom-etched motor driver boards based on the H-bridge LM293D chip.</p>
-		<p>&nbsp;</p>
-		<img src="images/cddrive03.jpg" width=800>
-       		<p>&nbsp;</p>
-		<p>The whole assembly is held together by electrical tape and epoxy. Scanners would have communicated ASCII over serial to plotters. We would have had half the teams build plotters and the other half, scanners. We had even worked out how to power the whole thing using ATX power supplies (also pulled out of the computer towers). But the project became too complicated for the scope of the camp. They could be reworked into standalone camps though. Hit me up if you need the code.</p>
-		<p>&nbsp;</p>
-		<iframe width="640" height="480" src="https://www.youtube.com/embed/TxG9MHaHJ0M" frameborder="0" allowfullscreen></iframe>
-        	<p>&nbsp;</p>
-        	<p>&nbsp;</p>
-		<a name="venus"><h3>Transit of Venus</h3></a>
-		<p></p>           	<p>&nbsp;</p>
-		<img src="images/transitofvenus_01.jpg" width=800>
-		  <p>(Photo credit: Kaori Morimoto)</p>
-       		  <p>&nbsp;</p>
-		  <p>On the 5th of June 2012, the planet Venus happened to slowly transit across the face of the Sun (from Earth's perspective). Erik Keever and I decided to deploy a Cassegrain telescope out in the open on campus and project the Sun onto a whiteboard. The spectacle lasted all day, and attracted much public attention. The Sun was bright enough for a clean image even in broad daylight. The equatorial mount helped. A tracking motor would have helped even more.</p>
-       		  <p>&nbsp;</p>		  
-		  <img src="images/transitofvenus_02.jpg" width=800>
-		  <p>(Photo credit: Bonnie Sephris Dominguez)</p>		    
-       		  <p>&nbsp;</p>		  		    
-		  <p>The event is said to occur in pairs about 8 years apart, but the pairs are seperated by about 243 years. So the next one will occur on the 10th of December in the year 2117. Can't wait!</p>		    
-		  <p>&nbsp;</p>		
-          <p></p>
-<p>&nbsp;</p>
-        </div>
-        <div id="content_bottom"></div>
-            
-            <div id="footer"><h3><a href="http://www.bryantsmith.com">Website based on HTML template by florida web design</a></h3></div>
-      </div>
-   </div>
+
+<div id="back-to-top-button">
+  <a href="#myname">▲ Back to top ▲</a>
+</div>
+
+<div id="menu">
+  <ul>
+    <li class="menuitem"><a href="index.html">About</a></li>
+    <li class="menuitem"><a href="research.html">Research</a></li>
+    <li class="menuitem"><a href="tech.html">Tech/Play</a></li>
+    <li class="menuitem"><a href="art.html">Art/Play</a></li>
+    <li class="menuitem"><a href="links.html">Links</a></li>
+  </ul>
+</div>
+</div>
+<div id="content">
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org024456f">Miscellany</a></li>
+<li><a href="#org38a11bc">Nearspace Weather Balloon</a></li>
+<li><a href="#orgfbd48d6">Transit of Mercury</a></li>
+<li><a href="#orgc1a7a43">CD-drive shenanigans</a></li>
+<li><a href="#orgfb4c676">Transit of Venus</a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-org024456f" class="outline-2">
+<h2 id="org024456f">Miscellany</h2>
+</div>
+
+<div id="outline-container-org38a11bc" class="outline-2">
+<h2 id="org38a11bc">Nearspace Weather Balloon</h2>
+<div class="outline-text-2" id="text-org38a11bc">
+
+<figure>
+<img src="img/balloon_01.jpg" alt="balloon_01.jpg" width="800">
+
+</figure>
+
+<p>
+In July of 2016, I bumped into the <a href="https://eugenemakerspace.com/">Eugene Maker Space</a> at the local faire
+through a friend (Dean Walton) on campus. They (Rick Osgood, Weston
+Turner) were showcasing a payload that they intended to send up above the
+stratosphere tethered to a weather balloon. They had my attention.
+</p>
+
+
+<figure>
+<img src="img/balloon_02.jpg" alt="balloon_02.jpg" width="800">
+
+</figure>
+
+<p>
+The payload consisted of a raspberry pi, a handheld programmable radio, a
+TNC inbetween the two, a camera, and a GPS module. While most such
+payloads include a cellphone, the FCC frowns on that practice. This might
+have something to do with catching too many cell towers at once. This one
+however was programmed to transmit it&rsquo;s coordinates via standard APRS
+radio packets. I offered my BME280 weather chip breakout board to the
+setup so we could monitor temperature, pressure, and humidity as well.
+The chassis was designed and put together by Jeffrey Graman.
+</p>
+
+
+<figure>
+<img src="img/balloon_03.jpg" alt="balloon_03.jpg" width="800">
+
+</figure>
+
+<p>
+Kevin Forsyth also designed a second payload with several raspberry pis&rsquo;
+and cameras as a panoramic photoshoot device. There exist prediction
+applets that chart expected balloon paths after taking payload weights,
+balloon size, amount of Helium, and date/time/location of launch as
+inputs. We launched ours from central Oregon a few hours later than
+scheduled. The path didn&rsquo;t drift significantly. We had to give chase in
+our cars (and eventually on foot) for nearly four hours, all the while
+receiving live packets from the payload and displaying the coordinates on
+a map in our laptops (and radioing information to the rest of the
+convoy). It turns out that others in neighboring towns (including Eugene)
+had also received strange APRS packets with ridiculous altitude values.
+</p>
+
+
+<figure>
+<img src="img/balloon_04.jpg" alt="balloon_04.jpg" width="800">
+
+</figure>
+
+<p>
+The balloon popped above 80,000 feet. The chassis was well insulated,
+rendering the temperature and pressure data only contextually
+interesting. The best part of the trip was to actually catch visual sight
+of the balloon at its highest point (the balloon expands in size as it
+rises into thinner air), and watch it burst (suddenly disappear). We lost
+radio contact with it for a while during the parachuted descent, but
+recovered it as we got closer to its expected drop point. Finding it
+dangling off of a tree branch was pretty cool too. The EMS will be
+planning another launch with an expanded team, a better chassis, and a
+more sophisticated payload (with external sensors). We&rsquo;re waiting for the
+weather to get better.
+</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MVd1E8uFlsE" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="outline-container-orgfbd48d6" class="outline-2">
+<h2 id="orgfbd48d6">Transit of Mercury</h2>
+<div class="outline-text-2" id="text-orgfbd48d6">
+
+<figure>
+<img src="img/transitofmercury_01.jpg" alt="transitofmercury_01.jpg" width="800">
+
+<figcaption><span class="figure-number">Figure 5: </span>Photo credit: <a href="https://about.me/DeyWalt">Dean Walton</a></figcaption>
+</figure>
+
+<p>
+On the 9<sup>th</sup> of May 2016, the planet Mercury happened to slowly transit
+across the face of the Sun (from Earth&rsquo;s perspective). Prof. <a href="https://physics.uoregon.edu/profile/rsf/">Scott
+Fischer</a>, <a href="https://about.me/DeyWalt">Dean Walton</a>, Erik Keever and I decided to deploy two telescopes
+out in the open on campus. One of them employed interference-based
+bandpass filters at the Helium alpha line (667.8 nm). The other was a
+Newtonian type, 10&ldquo; Dobsonian scope, and was used to project an image of
+the Sun onto a board. The Sun was bright enough for a clean image even in
+broad daylight.
+</p>
+
+
+<figure>
+<img src="img/transitofmercury_02.jpg" alt="transitofmercury_02.jpg" width="800">
+
+<figcaption><span class="figure-number">Figure 6: </span>Photo credit: <a href="https://about.me/DeyWalt">Dean Walton</a></figcaption>
+</figure>
+
+<p>
+The transit was already in progress as the Sun rose on the west coast.
+The entire transit took 8 hours to run through its course. We were out
+until about 12 PM local time. It managed to attract some public
+attention.
+</p>
+
+
+<figure>
+<img src="img/transitofmercury_03.jpg" alt="transitofmercury_03.jpg" width="800">
+
+<figcaption><span class="figure-number">Figure 7: </span>Photo credit: <a href="https://about.me/DeyWalt">Dean Walton</a></figcaption>
+</figure>
+
+<p>
+Unlike Venus, mercurial transits are relatively more common. They occur
+about 13 to 33 years apart. Despite the orbital period of Mercury being
+about 88 Earth-days, the planar tilt of its orbit is opposite that of the
+Earth. Its day-night cycle is tidally locked to its orbital period to a
+ratio of 3/2. The planet&rsquo;s silhouette was about 1/160th the diameter of
+the Sun. A bit of an anti-climax, really, unless you know what you are
+looking at.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1a7a43" class="outline-2">
+<h2 id="orgc1a7a43">CD-drive shenanigans</h2>
+<div class="outline-text-2" id="text-orgc1a7a43">
+
+<figure>
+<img src="img/cddrive01.jpg" alt="cddrive01.jpg" width="800">
+
+</figure>
+
+<p>
+I do some volunteer work for <a href="https://spicescience.uoregon.edu/">SPICE Camp</a> every summer, as is mentioned
+<a href="repo.html">elsewhere</a>. And one of the most loved exercises is the one where we get
+the kids to take old, surplused computer towers apart for parts. Most of
+them have never seen the guts before, and they are natural destroyers of
+things. Back in 2013, during a routine brainstorming session on possible
+new activities for the camp, we (<a href="https://pages.uoregon.edu/wwe/">Wes</a> and I) attempted to create a
+project where parts from CD-drives and hard disks (the voice coil or
+readhead) could be put together to make 2D plotters and scanners. We
+ended up scrapping the idea on account of the design being to unreliable
+and time consuming. But we did successfully create some prototypes.
+</p>
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/a_5HK0wdDYE" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/0iV6Bp7krnI" frameborder="0" allowfullscreen></iframe>
+
+<p>
+Linear stages are a pain to deal with. Having dabbled in trying to make a
+reprap, I am intimately familiar with that pain. The drive trays are
+controlled by DC motors. Some read heads are controlled by DC motors, and
+others by stepper motors. To work with DC motors and get an estimate of
+distance travelled, we used photogates (IR interrupters) and black
+patterns printed onto transparencies.
+</p>
+
+
+<figure>
+<img src="img/cddrive02.jpg" alt="cddrive02.jpg" width="800">
+
+</figure>
+
+<p>
+We had end-stops for edge-limit detection, and a startup, full travel
+routine to estimate maximum range for both directions. All the &ldquo;images&rdquo;
+were ascii files with a dot for blank space, an &ldquo;x&rdquo; for marked pixel, and
+an &ldquo;n&rdquo; for new line. The scanner simply used a photodiode to measure
+reflection from a laser pointer. The plotter however, used a hard-drive
+voice coil to lift and drop the pen. This was a huge mistake, as it was
+heavy, and tended to jerk the whole light device out of alignment. The
+drop and lift angles weren&rsquo;t vertical either, and voice coils are a huge
+power draw. All of these were controlled by custom-etched motor driver
+boards based on the H-bridge <code>LM293D</code> chip.
+</p>
+
+
+<figure>
+<img src="img/cddrive03.jpg" alt="cddrive03.jpg" width="800">
+
+</figure>
+
+<p>
+The whole assembly is held together by electrical tape and epoxy.
+Scanners would have communicated ASCII over serial to plotters. We would
+have had half the teams build plotters and the other half, scanners. We
+had even worked out how to power the whole thing using ATX power supplies
+(also pulled out of the computer towers). But the project became too
+complicated for the scope of the camp. They could be reworked into
+standalone camps though. Hit me up if you need the code.
+</p>
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/TxG9MHaHJ0M" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="outline-container-orgfb4c676" class="outline-2">
+<h2 id="orgfb4c676">Transit of Venus</h2>
+<div class="outline-text-2" id="text-orgfb4c676">
+
+<figure>
+<img src="img/transitofvenus_01.jpg" alt="transitofvenus_01.jpg" width="800">
+
+<figcaption><span class="figure-number">Figure 11: </span>Photo credit: Kaori Morimoto</figcaption>
+</figure>
+
+<p>
+On the 5<sup>th</sup> of June 2012, the planet Venus happened to slowly transit
+across the face of the Sun (from Earth&rsquo;s perspective). Erik Keever and I
+decided to deploy a Cassegrain telescope out in the open on campus and
+project the Sun onto a whiteboard. The spectacle lasted all day, and
+attracted much public attention. The Sun was bright enough for a clean
+image even in broad daylight. The equatorial mount helped. A tracking
+motor would have helped even more.
+</p>
+
+
+<figure>
+<img src="img/transitofvenus_02.jpg" alt="transitofvenus_02.jpg" width="800">
+
+<figcaption><span class="figure-number">Figure 12: </span>Photo credit: Bonnie Sephris Dominguez</figcaption>
+</figure>
+
+<p>
+The event is said to occur in pairs about 8 years apart, but the pairs
+are seperated by about 243 years. So the next one will occur on the 10<sup>th</sup>
+of December in the year 2117. Can&rsquo;t wait!
+</p>
+</div>
+</div>
+</div>
 </body>
 </html>

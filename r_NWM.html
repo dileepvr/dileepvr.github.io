@@ -1,152 +1,429 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-<title>Dileep's personal page</title>
+<!-- 2019-11-22 Fri 21:01 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dileep's Personal Webpage</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Dileep V. Reddy">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
 </script>
 <script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
-
 <body>
-<div id="container">
-		<div id="header">
-        	<h1>Dileep<span class="off">Reddy</span></h1>
-            <h2>My Overlapping Magisteria</h2>
-        </div>   
-        
-        <div id="menu">
-        	<ul>
-                <li class="menuitem"><a href="index.html">About</a></li>
-                <li class="menuitem"><a href="research.html">Research</a></li>
-                <li class="menuitem"><a href="tech.html">Tech/Play</a></li>
-		<li class="menuitem"><a href="art.html">Art/Play</a></li>
-              <li class="menuitem"><a href="links.html">Links</a></li>
-            </ul>
-        </div>
-        
-        <div id="leftmenu">
-
-        <div id="leftmenu_top"></div>
-
-				<div id="leftmenu_main">    
-                
-                <h3></h3>                        
-                <ul>
-                  <li><a href="r_TM.html">Temporal modes</a></li>
-                  <li><a href="r_NWM.html">Nonlinear wave mixing</a></li>
-                  <li><a href="r_NR.html">Neutrino rumble</a></li>
-                  <li><a href="r_QS.html">Quantum-shwantum</a></li>
-                  <li><a href="r_CSM.html">Classical stat-mech</a></li>		  		  
-                </ul>
+<div id="preamble" class="status">
+<div id="header">
+  <h1 id="myname">Dileep<span class="off">Reddy</span></h1>
+  <h2>My Overlapping Magisteria</h2>
 </div>
-                
-                
-              <div id="leftmenu_bottom"></div>
-        </div>
-        
-        
-        
-        
-		<div id="content">
-        
-        
-        <div id="content_top"></div>
-        <div id="content_main">
-          <h2>Nonlinear wave mixing</h2>
-          <p>&nbsp;</p>
-		<a><h3>Sections:-</h3></a>
-	  <p>&nbsp;</p>
-          <li><a href="r_NWM.html#elec">Consider the electron</a></li>
-          <li><a href="r_NWM.html#ant">One antenna, two antennae</a></li>
-          <li><a href="r_NWM.html#con">In concert</a></li>
-          <li><a href="r_NWM.html#tran">Transparent materials</a></li>
-          <li><a href="r_NWM.html#res">Off-Resonance, and the origin of refractive index</a></li>	  
-          <li><a href="r_NWM.html#fou">Fourier transforms</a></li>
-          <li><a href="r_NWM.html#lin">Linear, and nonlinear response</a></li>
-          <li><a href="r_NWM.html#pha">Phase matching</a></li>
-	  <p>&nbsp;</p>	  
-	  <a name="elec"><h3>Consider the electron</h3></a>
-	  <p>&nbsp;</p>
-	  All first courses on electromagnetism introduce Coulomb's expression for the electric field due to a point charge. Given an electron with charge $-q$, the field at a distance $r$ away would read
-	  $$\mathbf{E} = {-q \over 4\pi\epsilon_0r^2}\hat{\mathbf{e}}_{\mathbf{r}}.$$
-	  Thus, if another electron were to be placed at said location at a distance $r$ from the first one, it would experience the existence of the first electron as a repulsive force, albeit diminished in magnitude due to distance.
-	  <img src="images/r_NWM_elec1.png" width=800>
-	  <p>What if one were to move the first electron? How soon would the second electron detect this change? And in what manner?</p>
-	  <p>It is possible (though not necessarily useful) to reduce all of Maxwell's equations into a form well suited for discussing point charges such as these. To quote from Richard P. Feynman's "Lectures on Physics Vol. I," chapter 28, the full form looks like</p>
-	  $$\mathbf{E}=\frac{-q}{4\pi\epsilon_0}\left[\frac{\hat{\mathbf e}_{\mathbf r'}}{r'^2} + \frac{r'}{c}\frac{d}{dt}\left(\frac{\hat{\mathbf e}_{\mathbf r'}}{r'^2}\right)+\frac{1}{c^2}\frac{d^2}{dt^2}\hat{\mathbf e}_{\mathbf r'}\right].$$
-	  <p>The little prime on $r$ is meant to account for the time-delay for information to travel from the electron to the measurement point. $r'$ is the retarded distance, and $\hat{\mathbf e}_{\mathbf r'}$ the apparent direction pointing towards where the source electron was located at a time $r'/c$ ago.</p>
-	  The first two terms are merely the Coulombic field, and a first-order temporal correction to it. The both of them scale as $1/r^2$, and can be neglected at large distances. The third term, however, depends on the transverse/lateral acceleration (i.e. perpendicular to the line-of-sight) of the source electron, and falls off with distance, at a rate slower than the Coulombic terms:
-	  $$E_\perp = \frac{-q}{4\pi\epsilon_0c^2r}a_\perp\left(t-\frac{r}{c}\right).$$
-	  This indicates that the electromagnetic field has a sluggish quality to it that causes rapid disturbances to spread out in space at speed $c$. It also implies that accelerating charges radiate energy. We see this in synchrotron radiation, and use it in free-space communication technologies. The slow, $1/r$ fall-off is also the reason light emitted by electronic motion in a galaxy 5 billion light-years away can be picked up by CCD detectors here on earth.
-	  <img src="images/r_NWM_elec2.gif" width=800>	    
-	  <a name="ant"><h3>One antenna, two antennae</h3></a>
-	  <p>&nbsp;</p>
-	  In practice, it is rather difficult to isolate a single electron, and then cause it to accelerate, and subsequently detect its radiation. However, note that the radiative component of the electric field is separate from the Coulombic components, which can be cancelled by an inertial positive charge placed at the right location. Meaning, we can generate radiation by inducing a bulk acceleration of several free (conductive) electrons in a neutral wire of metal, as is done in typical transmission antennae.
-	  <img src="images/r_NWM_ant01.png" width=600><p>(Image source: Lectures in Physics Vol. I)</p>
-	  <p>&nbsp;</p>	    
-	  Applying a simple, monochrome Sine-wave voltage across a straight metal rod would generate an oscillating dipole field in its vicinity. The efficiency with which said dipole antenna would radiate energy away depends on the length of the rod relative to the wavelength of light at that Sine-wave frequency (a la impedence-matching), but the basics of our field formula would still hold. If the dipole were aligned along the z-axis in polar coordinates, then the field amplitude would fall off as $1/r$, irrespective of the azimuthal angle $\phi$. But because the field depends on the transverse acceleration of the charges perpendicular to the line of sight, the polar ($\theta$) dependence would be a simple Cosine-projection, and would vanish directly above or below the rod.
-	  <p>&nbsp;</p>
-	  <img src="images/r_NWM_ant02.png" width=300><p>(Image source: Lectures in Physics Vol. I)</p>
-	  <p>&nbsp;</p>
-	  The field structure becomes more interesting when we place two dipole antennae in parallel (at locations $S_1$ and $S_2$ in the above figure), and drive them in sync with the same Sine-wave voltage. Naturally, the both of them would produce their own independent, oscillating-dipole electric fields. The total field would be the vector-sum of the two. And because the fields are sinusoidal, receivers at different locations ($D_1$, $D_2$, $D_3$) would experience the two fields retarded by different amounts, based on the relative distances. Consequently, the two waves would add constructively in some directions, and destructively in others.
-	  <p>&nbsp;</p>	  
-	  <img src="images/r_NWM_ant03.png" width=600><p>(Image source: <a href="http://www.falstad.com/ripple/">Falstad</a>)</p>
-	  <p>&nbsp;</p>
-	  The number of hotspot (and cancellation deadzone) sectors around the two antennae is determined by the distance between them, relative to the wavelength of the frequency in question. In the above image, for example, the dipoles are being driven in-phase (i.e. together), and are placed two wavelengths apart. The resulting field distribution is essentially the Young's double-slit interference pattern. We can swap the hotspots with the deadzones by merely shifting one of the dioples in phase by $180^\circ$ relative to the other, as shown below.
-	  <p>&nbsp;</p>	  	    
-	  <img src="images/r_NWM_ant04.png" width=600><p>(Image source: <a href="http://www.falstad.com/ripple/">Falstad</a>)</p>
-	  <p>&nbsp;</p>
-	  To illustrate the addition of monochrome Sine-waves better, I have created these one-dimensional, unidirectional, toy animations of dipole radiators and receivers. For further simplicity, the $1/r$ decay of the amplitude has also been neglected. If two sources (red and blue) were placed two wavelengths apart and driven in-phase (in sync), then the receiver (green) would indeed see a coherent sum of the two individual waves.
-	  <img src="images/r_NWM_ant05.gif" width=800>	    
-	  If the sources were to be driven out of phase, then naturally, in the collinear direction, the waves would cancel each other.
-	  <img src="images/r_NWM_ant06.gif" width=800>	    
-	  Another way to destructively interfere in the collinear direction while still being driven in-phase is to separate the sources by a distance that is an integer number of wavelengths plus half-a-wavelength, as below.
-	  <img src="images/r_NWM_ant07.gif" width=800>	    
-	  <p>&nbsp;</p>	  
-	    
-	  <a name="con"><h3>In concert</h3></a>
-	  <p>&nbsp;</p>
-	  Of course, the next obvious step is to add more antennae. Still sticking to the simple, one-dimensional picture, one can cause a regularly spaced array of dipole antennae to constructively interfere in the collinear direction, if their relative phases are connect for their relative positions. For instance, antennae separated by a whole number of wavelengths have to oscillate in phase, and those separated by a whole number plus half-a-wavelength have to oscillate out of phase, as shown below. The principle carries over to arbitrary separations as well.
-	  <img src="images/r_NWM_conc02.gif" width=800>
-	  If we return to the two-dimensional, in-plane radiation pattern, we will observe a more complex fringe structure than mere two-slit interference. For example, if we had six radiators (like below), then there would be fewer directions in which all six dipole patterns would add constructively. Consequently, all the output power would be concentrated into narrow sectors along special directions determined by the exact seperation and relative phases. The more antennae we add, the more knobs we have to play with (positions of said antennae, power, phase, and orientation of each, etc.), the better our control over the radiation pattern. This is the basic concept behind <a href="https://en.wikipedia.org/wiki/Phased_array">phased arrays</a>.
-	  <p>&nbsp;</p>
-	  <img src="images/r_NWM_conc03.png" width=600><p>(Image source: Lectures in Physics Vol. I)</p>
-	  <p>&nbsp;</p>
-	  The radiation pattern of an antennae array is identical to it's sensitivity plot. In other words, if a giant array of antennae were all to receive a single-frequency (monotone) signal, then the relative phases of the signals from each subcomponent of the array can reveal the exact direction of it's origin (up to the resolution of the array, which depends on the size of the array, etc.). This is how large arrays of radio telescopes pinpoint the sources of cosmic signals without having to move much. Perhaps the best use case of antennae arrays is in radars, where they are used to both transmit and receive. And the most famous example for one of these is the fabled <a href="https://en.wikipedia.org/wiki/Duga_radar">Russian Woodpecker</a>.
-	  <p>&nbsp;</p>	  
-	  <img src="images/r_NWM_conc04.jpg" width=640><p>(DUGA Radar array, Chernobyl. Image source: <a href="https://en.wikipedia.org/wiki/File:DUGA_Radar_Array_near_Chernobyl,_Ukraine_2014.jpg">Wikimedia Commons</a>)</p>
-	  <p>&nbsp;</p>	    
-	  <a name="tran"><h3>Transparent materials</h3></a>
-	  <p>&nbsp;</p>
-	  So much for large antennae. We now move on to tiny atoms. Ever since <a href="https://en.wikipedia.org/wiki/Fraunhofer_lines">Fraunhofer (and Wollaston before him)</a> discovered dark depressions in the solar spectrum in the early 19th century, we've known about special absorption frequencies for various materials. Over two centuries worth of work has lead to a pretty solid theory to explain these as electronic transitions between energy levels. However, we are concerned with how atoms behave when excited at frequencies far away from any of its absorption lines. That is, what happens when an electromagnetic wave of frequency that is not resonant with any electronic transition within an atom, excites it? A good model for the atom's behavior turns out to be a simple, classical particles on a spring!
-	  <img src="images/r_NWM_trans01.png" width=600>
-	  The heavy nucleus is unlikely to respond much to a weak, external wave. The electrons, however, get easily knocked around. If the external, non-resonant field isn't too strong, the electrons in a free, gaseous atom will simple oscillate about the nucleus at a matching frequency, and along the direction of the polarization of the external field. The atom know behaves like a miniature dipole antenna. The oscillating electron will know lose its energy (due to acceleration) back into the electromagnetic field by radiating in a dipole pattern. This occurs in systems where the atoms/molecules are smaller than the wavelength of the external field, and is called <a href="https://en.wikipedia.org/wiki/Rayleigh_scattering">Rayleigh scattering</a>. This is why one can see the path of a laser beam in the fog. And to a large extent, this is also why the sky is blue.
-	  <img src="images/r_NWM_trans02.png" width=800>
-	  The direction of the re-radiated power from individual atoms has no correlation to that of the external beam (apart from the polarization orientation of the dipole). If we were to consider a whole host of atoms, then the picture changes. For instance, we return to the one-dimensional picture, and place a linear array of atoms as a stand-in for the bulk of a transparent medium. Since we don't need to restrict ourselves to crystalline media, we can space them randomly as well. But as long as the dipoles are all being driven by the same coherent, external beam, then they will automatically be phased to re-radiate constructively in the "forward" direction of the external beam. With more atoms in the path (i.e. thicker the slab), the less the power scattered in other directions. Therefore, a beam can pass through a slab of glass, or a glass of water, largely unmolested. The energy of the beam has to temporarily be shared between the electromagnetic field, and the eletrons in the medium, however. This leads to some interesting effects that are the subject of the following sections.
-	  <img src="images/r_NWM_trans03.gif" width=800>
-	  <p>&nbsp;</p>
-          <a name="res"><h3>Off-Resonance, and the origin of refractive index (Coming Soon)</h3></a>
-	  <p>&nbsp;</p>	  
-	  <a name="fou"><h3>Fourier transforms (Coming Soon)</h3></a>
-	  <p>&nbsp;</p>	  
-	  <a name="lin"><h3>Linear, and nonlinear response (Coming Soon)</h3></a>
-	  <p>&nbsp;</p>	  
-	  <a name="pha"><h3>Phase matching (Coming Soon)</h3></a>
-	  
-          <p>&nbsp;</p>
 
-	  <p>&nbsp;</p>
-          <p></p>
-        </div>
-        <div id="content_bottom"></div>
-            
-            <div id="footer"><h3><a href="http://www.bryantsmith.com">Website based on HTML template by florida web design</a></h3></div>
-      </div>
-   </div>
+<div id="back-to-top-button">
+  <a href="#myname">▲ Back to top ▲</a>
+</div>
+
+<div id="menu">
+  <ul>
+    <li class="menuitem"><a href="index.html">About</a></li>
+    <li class="menuitem"><a href="research.html">Research</a></li>
+    <li class="menuitem"><a href="tech.html">Tech/Play</a></li>
+    <li class="menuitem"><a href="art.html">Art/Play</a></li>
+    <li class="menuitem"><a href="links.html">Links</a></li>
+  </ul>
+</div>
+</div>
+<div id="content">
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orga702ff1">Nonlinear wave mixing</a></li>
+<li><a href="#org13d9476"><b>Consider the electron</b></a></li>
+<li><a href="#org4113e17"><b>One antenna, two antennae</b></a></li>
+<li><a href="#orgd855c59"><b>In concert</b></a></li>
+<li><a href="#orgc282f8e"><b>Transparent materials</b></a></li>
+<li><a href="#org49e3ebe"><b>Off-Resonance, and the origin of n</b></a></li>
+<li><a href="#org50981c4"><b>Fourier transforms</b></a></li>
+<li><a href="#org73ab2f6"><b>Linear &amp; nonlinear response</b></a></li>
+<li><a href="#org5644c28"><b>Phase matching</b></a></li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-orga702ff1" class="outline-2">
+<h2 id="orga702ff1">Nonlinear wave mixing</h2>
+<div class="outline-text-2" id="text-orga702ff1">
+</div>
+</div>
+
+<div id="outline-container-org13d9476" class="outline-2">
+<h2 id="org13d9476"><b>Consider the electron</b></h2>
+<div class="outline-text-2" id="text-org13d9476">
+<p>
+All first courses on electromagnetism introduce Coulomb&rsquo;s expression for
+the electric field due to a point charge. Given an electron with charge
+\(-q\), the field at a distance \(r\) away would read \[\mathbf{E} =
+	 \frac{-q}{4\pi\epsilon_0r^2}\hat{\mathbf{e}}_{\mathbf{r}}.\]
+</p>
+
+<p>
+Thus, if another electron were to be placed at said location at a
+distance \(r\) from the first one, it would experience the existence of
+the first electron as a repulsive force, albeit diminished in magnitude
+due to distance.
+</p>
+
+<figure>
+<img src="img/r_NWM_elec1.png" alt="r_NWM_elec1.png" width="780">
+
+</figure>
+
+<p>
+What if one were to move the first electron? How soon would the second
+electron detect this change? And in what manner?
+</p>
+
+<p>
+It is possible (though not necessarily useful) to reduce all of
+Maxwell&rsquo;s equations into a form well suited for discussing point charges
+such as these. To quote from Richard P. Feynman&rsquo;s &ldquo;Lectures on Physics
+Vol. I,&rdquo; chapter 28, the full form looks like \[\mathbf{E}=
+   \frac{-q}{4\pi\epsilon_0}\left[\frac{\hat{\mathbf e}_{\mathbf
+   r'}}{r'^2} + \frac{r'}{c}\frac{d}{dt}\left(\frac{\hat{\mathbf
+   e}_{\mathbf r'}}{r'^2}\right)+\frac{1}{c^2}\frac{d^2}{dt^2}\hat{\mathbf
+   e}_{\mathbf r'}\right].\]
+</p>
+
+<p>
+The little prime on \(r\) is meant to account for the time-delay for
+information to travel from the electron to the measurement point. \(r'\)
+is the retarded distance, and \(\hat{\mathbf e}_{\mathbf r'}\) the
+apparent direction pointing towards where the source electron was
+located at a time \(r'/c\) ago.
+</p>
+
+<p>
+The first two terms are merely the Coulombic field, and a first-order
+temporal correction to it. The both of them scale as \(1/r^2\), and can be
+neglected at large distances. The third term, however, depends on the
+transverse/lateral acceleration (i.e. perpendicular to the
+line-of-sight) of the source electron, and falls off with distance, at a
+rate slower than the Coulombic terms: \[E_\perp =
+	 \frac{-q}{4\pi\epsilon_0c^2r}a_\perp\left(t-\frac{r}{c}\right).\]
+</p>
+
+<p>
+This indicates that the electromagnetic field has a sluggish quality to
+it that causes rapid disturbances to spread out in space at speed \(c\).
+It also implies that accelerating charges radiate energy. We see this in
+synchrotron radiation, and use it in free-space communication
+technologies. The slow, \(1/r\) fall-off is also the reason light emitted
+by electronic motion in a galaxy 5 billion light-years away can be
+picked up by CCD detectors here on earth.
+</p>
+
+<figure>
+<img src="img/r_NWM_elec2.gif" alt="r_NWM_elec2.gif" width="780">
+
+</figure>
+</div>
+</div>
+
+<div id="outline-container-org4113e17" class="outline-2">
+<h2 id="org4113e17"><b>One antenna, two antennae</b></h2>
+<div class="outline-text-2" id="text-org4113e17">
+<p>
+In practice, it is rather difficult to isolate a single electron, and
+then cause it to accelerate, and subsequently detect its radiation.
+However, note that the radiative component of the electric field is
+separate from the Coulombic components, which can be cancelled by an
+inertial positive charge placed at the right location. Meaning, we can
+generate radiation by inducing a bulk acceleration of several free
+(conductive) electrons in a neutral wire of metal, as is done in
+typical transmission antennae.
+</p>
+
+<figure>
+<img src="img/r_NWM_ant01.png" alt="r_NWM_ant01.png" width="600">
+
+<figcaption><span class="figure-number">Figure 3: </span>Image source: Lectures in Physics Vol. I</figcaption>
+</figure>
+
+<p>
+Applying a simple, monochrome Sine-wave voltage across a straight metal
+rod would generate an oscillating dipole field in its vicinity. The
+efficiency with which said dipole antenna would radiate energy away
+depends on the length of the rod relative to the wavelength of light at
+that Sine-wave frequency (a la impedence-matching), but the basics of
+our field formula would still hold. If the dipole were aligned along
+the z-axis in polar coordinates, then the field amplitude would fall
+off as \(1/r\), irrespective of the azimuthal angle \(\phi\). But because
+the field depends on the transverse acceleration of the charges
+perpendicular to the line of sight, the polar (\(\theta\)) dependence
+would be a simple Cosine-projection, and would vanish directly above or
+below the rod.
+</p>
+
+<figure>
+<img src="img/r_NWM_ant02.png" alt="r_NWM_ant02.png" width="300">
+
+<figcaption><span class="figure-number">Figure 4: </span>Image source: Lectures in Physics Vol. I</figcaption>
+</figure>
+
+<p>
+The field structure becomes more interesting when we place two dipole
+antennae in parallel (at locations \(S_1\) and \(S_2\) in the above
+figure), and drive them in sync with the same Sine-wave voltage.
+Naturally, the both of them would produce their own independent,
+oscillating-dipole electric fields. The total field would be the
+vector-sum of the two. And because the fields are sinusoidal, receivers
+at different locations (\(D_1\), \(D_2\), \(D_3\)) would experience the two
+fields retarded by different amounts, based on the relative distances.
+Consequently, the two waves would add constructively in some
+directions, and destructively in others.
+</p>
+
+<figure>
+<img src="img/r_NWM_ant03.png" alt="r_NWM_ant03.png" width="600">
+
+<figcaption><span class="figure-number">Figure 5: </span>Image source: <a href="http://www.falstad.com/ripple/">Falstad</a></figcaption>
+</figure>
+
+<p>
+The number of hotspot (and cancellation deadzone) sectors around the
+two antennae is determined by the distance between them, relative to
+the wavelength of the frequency in question. In the above image, for
+example, the dipoles are being driven in-phase (i.e. together), and are
+placed two wavelengths apart. The resulting field distribution is
+essentially the Young&rsquo;s double-slit interference pattern. We can swap
+the hotspots with the deadzones by merely shifting one of the dioples
+in phase by \(180^\circ\) relative to the other, as shown below.
+</p>
+
+<figure>
+<img src="img/r_NWM_ant04.png" alt="r_NWM_ant04.png" width="600">
+
+<figcaption><span class="figure-number">Figure 6: </span>Image source: <a href="http://www.falstad.com/ripple/">Falstad</a></figcaption>
+</figure>
+
+<p>
+To illustrate the addition of monochrome Sine-waves better, I have
+created these one-dimensional, unidirectional, toy animations of dipole
+radiators and receivers. For further simplicity, the \(1/r\) decay of the
+amplitude has also been neglected. If two sources (red and blue) were
+placed two wavelengths apart and driven in-phase (in sync), then the
+receiver (green) would indeed see a coherent sum of the two individual
+waves.
+</p>
+
+<figure>
+<img src="img/r_NWM_ant05.gif" alt="r_NWM_ant05.gif" width="780">
+
+</figure>
+
+<p>
+If the sources were to be driven out of phase, then naturally, in the
+collinear direction, the waves would cancel each other.
+</p>
+
+<figure>
+<img src="img/r_NWM_ant06.gif" alt="r_NWM_ant06.gif" width="780">
+
+</figure>
+
+<p>
+Another way to destructively interfere in the collinear direction while
+still being driven in-phase is to separate the sources by a distance
+that is an integer number of wavelengths plus half-a-wavelength, as
+below.
+</p>
+
+<figure>
+<img src="img/r_NWM_ant07.gif" alt="r_NWM_ant07.gif" width="780">
+
+</figure>
+</div>
+</div>
+
+<div id="outline-container-orgd855c59" class="outline-2">
+<h2 id="orgd855c59"><b>In concert</b></h2>
+<div class="outline-text-2" id="text-orgd855c59">
+<p>
+Of course, the next obvious step is to add more antennae. Still sticking
+to the simple, one-dimensional picture, one can cause a regularly spaced
+array of dipole antennae to constructively interfere in the collinear
+direction, if their relative phases are connect for their relative
+positions. For instance, antennae separated by a whole number of
+wavelengths have to oscillate in phase, and those separated by a whole
+number plus half-a-wavelength have to oscillate out of phase, as shown
+below. The principle carries over to arbitrary separations as well.
+</p>
+
+<figure>
+<img src="img/r_NWM_conc02.gif" alt="r_NWM_conc02.gif" width="780">
+
+</figure>
+
+<p>
+If we return to the two-dimensional, in-plane radiation pattern, we will
+observe a more complex fringe structure than mere two-slit interference.
+For example, if we had six radiators (like below), then there would be
+fewer directions in which all six dipole patterns would add
+constructively. Consequently, all the output power would be concentrated
+into narrow sectors along special directions determined by the exact
+seperation and relative phases. The more antennae we add, the more knobs
+we have to play with (positions of said antennae, power, phase, and
+orientation of each, etc.), the better our control over the radiation
+pattern. This is the basic concept behind <a href="https://en.wikipedia.org/wiki/Phased_array">phased arrays</a>.
+</p>
+
+<figure>
+<img src="img/r_NWM_conc03.png" alt="r_NWM_conc03.png" width="600">
+
+<figcaption><span class="figure-number">Figure 11: </span>Image source: Lectures in Physics Vol. I</figcaption>
+</figure>
+
+<p>
+The radiation pattern of an antennae array is identical to it&rsquo;s
+sensitivity plot. In other words, if a giant array of antennae were all
+to receive a single-frequency (monotone) signal, then the relative
+phases of the signals from each subcomponent of the array can reveal the
+exact direction of it&rsquo;s origin (up to the resolution of the array, which
+depends on the size of the array, etc.). This is how large arrays of
+radio telescopes pinpoint the sources of cosmic signals without having
+to move much. Perhaps the best use case of antennae arrays is in radars,
+where they are used to both transmit and receive. And the most famous
+example for one of these is the fabled <a href="https://en.wikipedia.org/wiki/Duga_radar">Russian Woodpecker</a>.
+</p>
+
+<figure>
+<img src="img/r_NWM_conc04.jpg" alt="r_NWM_conc04.jpg" width="640">
+
+<figcaption><span class="figure-number">Figure 12: </span>DUGA Radar array, Chernobyl. Image source: <a href="https://en.wikipedia.org/wiki/File:DUGA_Radar_Array_near_Chernobyl,_Ukraine_2014.jpg">Wikimedia Commons</a></figcaption>
+</figure>
+</div>
+</div>
+
+<div id="outline-container-orgc282f8e" class="outline-2">
+<h2 id="orgc282f8e"><b>Transparent materials</b></h2>
+<div class="outline-text-2" id="text-orgc282f8e">
+<p>
+So much for large antennae. We now move on to tiny atoms. Ever since
+<a href="https://en.wikipedia.org/wiki/Fraunhofer_lines">Fraunhofer (and Wollaston before him)</a> discovered dark depressions in
+the solar spectrum in the early 19th century, we&rsquo;ve known about special
+absorption frequencies for various materials. Over two centuries worth
+of work has lead to a pretty solid theory to explain these as
+electronic transitions between energy levels. However, we are concerned
+with how atoms behave when excited at frequencies far away from any of
+its absorption lines. That is, what happens when an electromagnetic
+wave of frequency that is not resonant with any electronic transition
+within an atom, excites it? A good model for the atom&rsquo;s behavior turns
+out to be a simple, classical particles on a spring!
+</p>
+
+<figure>
+<img src="img/r_NWM_trans01.png" alt="r_NWM_trans01.png" width="600">
+
+</figure>
+
+<p>
+The heavy nucleus is unlikely to respond much to a weak, external wave.
+The electrons, however, get easily knocked around. If the external,
+non-resonant field isn&rsquo;t too strong, the electrons in a free, gaseous
+atom will simple oscillate about the nucleus at a matching frequency,
+and along the direction of the polarization of the external field. The
+atom know behaves like a miniature dipole antenna. The oscillating
+electron will know lose its energy (due to acceleration) back into the
+electromagnetic field by radiating in a dipole pattern. This occurs in
+systems where the atoms/molecules are smaller than the wavelength of
+the external field, and is called <a href="https://en.wikipedia.org/wiki/Rayleigh_scattering">Rayleigh scattering</a>. This is why one
+can see the path of a laser beam in the fog. And to a large extent,
+this is also why the sky is blue.
+</p>
+
+<figure>
+<img src="img/r_NWM_trans02.png" alt="r_NWM_trans02.png" width="780">
+
+</figure>
+
+<p>
+The direction of the re-radiated power from individual atoms has no
+correlation to that of the external beam (apart from the polarization
+orientation of the dipole). If we were to consider a whole host of
+atoms, then the picture changes. For instance, we return to the
+one-dimensional picture, and place a linear array of atoms as a
+stand-in for the bulk of a transparent medium. Since we don&rsquo;t need to
+restrict ourselves to crystalline media, we can space them randomly as
+well. But as long as the dipoles are all being driven by the same
+coherent, external beam, then they will automatically be phased to
+re-radiate constructively in the &ldquo;forward&rdquo; direction of the external
+beam. With more atoms in the path (i.e. thicker the slab), the less the
+power scattered in other directions. Therefore, a beam can pass through
+a slab of glass, or a glass of water, largely unmolested. The energy of
+the beam has to temporarily be shared between the electromagnetic
+field, and the eletrons in the medium, however. This leads to some
+interesting effects that are the subject of the following sections.
+</p>
+
+<figure>
+<img src="img/r_NWM_trans03.gif" alt="r_NWM_trans03.gif" width="780">
+
+</figure>
+</div>
+</div>
+
+<div id="outline-container-org49e3ebe" class="outline-2">
+<h2 id="org49e3ebe"><b>Off-Resonance, and the origin of n</b></h2>
+<div class="outline-text-2" id="text-org49e3ebe">
+<p>
+<b>(Coming Soon)</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org50981c4" class="outline-2">
+<h2 id="org50981c4"><b>Fourier transforms</b></h2>
+<div class="outline-text-2" id="text-org50981c4">
+<p>
+<b>(Coming Soon)</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org73ab2f6" class="outline-2">
+<h2 id="org73ab2f6"><b>Linear &amp; nonlinear response</b></h2>
+<div class="outline-text-2" id="text-org73ab2f6">
+<p>
+<b>(Coming Soon)</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org5644c28" class="outline-2">
+<h2 id="org5644c28"><b>Phase matching</b></h2>
+<div class="outline-text-2" id="text-org5644c28">
+<p>
+<b>(Coming Soon)</b>
+</p>
+</div>
+</div>
+</div>
 </body>
 </html>
